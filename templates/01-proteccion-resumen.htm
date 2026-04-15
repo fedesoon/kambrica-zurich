@@ -1,0 +1,208 @@
+<div class="container mod-header section-proteccion-resumen">
+	<div class="row">
+		<div class="col-md-7 col-lg-8">
+			<div class="title-1 mt-3">{{:producto}} {{:plan}}
+				<span class="small">Póliza N° {{:numero}}</span></div>
+			</div>
+
+			{{if cotizacionVrusMostrar}}
+			<div class="col-md-5 col-lg-4">
+				<div class="card-default card-vrus float-md-right ifDesktop">
+					<div class="button-modal btn-vrus">
+						<button type="button" class="btn btn-link" data-toggle="modal" data-target="#modal-default" data-modalcontent="cotizacionVrus">
+							<i class="demo-icon icon-iconsapp_info"></i>
+						</button>
+					</div>
+					<p class="subtitle">Cotización VRU$S: <strong>{{:~f(cotizacionVrus,'usd')}}</strong></p>
+					<p class="label">(valor referencia dolar)</p>
+				</div>
+			</div>
+			{{/if}}
+		</div>
+		<div class="row mb-md-5">
+			<div class="col-12">
+				<div class="h-list-simple">
+					<ul class="list-inline">
+						<li class="list-inline-item">Fecha inicial: <span class="body-copy-bold">{{:~f(fechaInicial,'d/m/a') }}</span></li>
+						<li class="list-inline-item">Vigencia final: <span class="body-copy-bold">{{:fechaFinalizaString}}</span></li>
+						{{if (plazo)}}<li class="list-inline-item">Plazo: <span class="body-copy-bold">{{:plazo}}</span></li>{{/if}}
+						<li class="list-inline-item link"><a href="#panel-detalle-de-poliza" data-toggle="tab" class="custom-link"><i class="demo-icon icon-iconsapp_arrow-right icon-left"></i>Ver detalle de póliza</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="divider-medium divider-long ifMobile mt-3 mb-0"></div>
+		<div class="row">
+			<div class="col-12 custom-section mb-large mb-3">
+				<div class="first-section-container has-links">
+					<div class="row">
+						<div class="col-12 col-md-7">
+							<div id="" class="">
+
+								<!--  TABS ASEGURADOS -->
+								<div class="resume-wrapper">
+									<div class="resume-header">
+										<div class="title-3 mb-md-4">Suma asegurada por fallecimiento</div>
+									</div>
+								</div>
+								<div class="secondary-navigation columns-50 evolucion-fondos">								
+
+									{{if asegurados.length == 1}}
+									<p>
+										<span class="body-copy-bold">Asegurado:</span>
+										{{for asegurados}}
+										{{:nombre}}
+										{{/for}}
+									</p>
+									{{else}}
+									<p><span class="body-copy-bold">Asegurados:</span></p>
+									<ul class="nav border-bottom" id="evolucion-fondos-secondary-nav-tabs">
+										{{for asegurados}}
+										<li class="nav-item">
+											<a class="nav-link {{if #index == 0}}active{{/if}}" href="#asegurado-{{:#index}}" data-toggle="tab" >{{:nombre}}</a>
+										</li>
+										{{/for}}
+									</ul>
+									{{/if}}
+
+
+								</div>
+								<div class="tab-content">
+
+									{{for asegurados}}
+									<div class="tab-pane fade {{if #index == 0}}active show {{/if}}" id="asegurado-{{:#index}}">
+										<div class="background-gray-border mb-0">
+											<div class="col-main">
+												<div class="aumont">
+													<span class="amount-main small">{{:~f(aseguradoSuma, aseguradoSumaMoneda, 'format')}}</span>
+													{{if aseguradoSumaMoneda != "pesos" }}
+													<span class="d-block d-md-inline">
+														Equivalente en pesos a <span class="body-copy-bold">{{:~f(aseguradoSumaEqPesos,'pesos','$ ') }}</span>
+													</span>
+													{{/if}}
+												</div>
+											</div>
+										</div>
+										<div class="table-responsive table-wrap">
+											<div class="table-container">
+												<table class="table mb-0 mb-md-3">
+													<thead class="thead-border">
+														<tr class="">
+															<th scope="col" class="pl-0">Beneficios incluidos</th>
+															<th scope="col">Monto {{!-- ({{:aseguradoSumaMoneda}}) --}}</th>
+															{{if ~root.beneficiosValorVrusMostrar}}<th scope="col">Monto (VRU$S)</th>{{/if}}
+														</tr>
+													</thead>
+													<tbody>
+														{{for beneficiosIncluidos}}
+														<tr>
+															<th scope="row">{{:beneficio}}</th>
+															<td>{{:~f(monto, #parent.parent.data.aseguradoSumaMoneda ,'format') }}</td>
+															{{if ~root.beneficiosValorVrusMostrar}}<td>{{:~f(valorVrus,'vrus','VRU$S ') }}</td>{{/if}}
+														</tr>
+														{{/for}}
+													</tbody>
+												</table>
+											</div>
+										</div>
+
+										<div>
+											<ul class="list-inline double-item-left">
+												<li class="list-inline-item">
+													<a  data-toggle="tab" href="#panel-coberturas" class="custom-link"><i class="demo-icon icon-iconsapp_arrow-right icon-left"></i>Ver detalle de coberturas</a>
+												</li>
+												<li class="list-inline-item no-border-top"><a href="" data-toggle="modal" data-target="#modal-default" data-modalcontent="queHacerSiniestro">Qué hacer en caso de siniestro</a></li>
+											</ul>
+										</div> 
+									</div>
+									{{/for}}
+
+								</div>
+							</div>
+
+
+							<div class="divider-small divider-long ifMobile my-3"></div>
+						</div>
+
+
+
+						<div class="col-12 col-md-4 offset-md-1">
+							{{if cuentaIndividual.saldoPesos > 0}}
+							<div class="mb-md-5">
+								<div class="mb-0 mb-xl-3">
+									<div class="title-3">Saldo de mi cuenta individual
+										<a href="#" data-toggle="modal" data-target="#modal-default" data-modalcontent="cuentaIndividualProteccion"><i class="demo-icon icon-iconsapp_info icon-right"></i></a>
+									</div>
+								</div>
+								<div class="resume-body">
+									<div class="col-main align-top pt-3">
+										<div class="aumont">
+											<span class="amount d-block mb-0-mobile">{{:~f(cuentaIndividual.saldoPesos,'pesos','$ ') }}</span>
+										</div>
+									</div>
+
+									<div class="mb-3">
+									<span class="label">Última prima paga {{:~f( pagos.ultimaPrimaFecha ,'d/m/a' ) }}: </span><span class="body-copy-bold {{!-- d-md-block --}}">{{:~f(pagos.ultimaPrimaPesos,'pesos','$ ') }}</span></span>
+									</div>
+									{{if incrementoAutomatico && incrementoAutomatico != 0}}
+									<p class="label color-title mb-2">Prima con incremento automático del {{:incrementoAutomatico}}%</p>
+									{{/if}}
+
+									{{if pagoPrimasSuspendido}}
+									<p class="label color-title mb-2">Pago de primas suspendido hasta {{:~f( pagos.proximaPrimaFecha ,'d/m/a' ) }}</p>
+									{{/if}}
+									
+									<p class="mt-4"><a href="#panel-pagos" data-toggle="tab" class="custom-link"><i class="demo-icon icon-iconsapp_primary-arrow-right icon-left"></i>Ver detalle de pagos</a></p>
+
+								</div>
+								<a href="#panel-pagos" data-toggle="tab" class="btn btn-link link-next ifMobile"><i class="demo-icon icon-iconsapp_arrow-right"></i>
+								</a>
+							</div>
+							{{/if}}
+							{{if cuentaIndividual.saldoPesos > 0 && cotizacionVrusMostrar}}
+							<div class="divider-small divider-long ifMobile mt-3"></div>
+							{{/if}}
+							{{if cotizacionVrusMostrar}}
+							<div class="resume-wrapper card-vrus position-relative ifMobile pb-0">
+								<div class="button-modal btn-vrus">
+									<button type="button" class="btn btn-link" data-toggle="modal" data-target="#modal-default" data-modalcontent="cotizacionVrus">
+										<i class="demo-icon icon-iconsapp_info"></i>
+									</button>
+								</div>
+								<p class="subtitle">Cotización VRU$S: <strong>{{:~f(cotizacionVrus,'vrus') }}</strong></p>
+								<p class="label">(valor referencia dolar)</p>
+							</div>
+
+							{{/if}}
+							<div class="divider-medium divider-long ifMobile my-3"></div>
+							<div class="">
+								<div class="detail-header clearfix">
+									<div class="title-3">Asistencias incluídas en la póliza</div>
+								</div>
+								<div class="detail-body vertical-list">
+									<dl>
+										{{for asistenciasIncluidas}}
+										<dt><h6>{{:asistencia}}</h6>
+										</dt>
+										<dd class="mb-4"><a href="{{:link}}"><i class="demo-icon icon-iconsapp_download icon-left"></i>Descargar condiciones</a>
+										</dd>
+										{{/for}}
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> 
+
+	<!-- Condiciones -->
+	<div class="container-fluid bg-condiciones">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 custom-section mb-medium colapsible-icon mt-4 mt-md-5">
+					<p class="color-title">{{:txt.monedaNota}}</p>
+				</div>
+			</div>
+		</div>

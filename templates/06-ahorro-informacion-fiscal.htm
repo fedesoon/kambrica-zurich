@@ -1,0 +1,110 @@
+<div class="container section-ahorro-informacion-fiscal">
+	<div class="row title-section-wrapper">
+		<div class="col-12">
+			<h1 class="title-1 mt-3">Información fiscal</h1>
+		</div>
+		<div class="col-12 col-md-2" style="min-width:268px">
+			<div class="select-4-container select-inline select-4-icon">
+				<label class="label">Período a consultar</label>
+				<select class="select-4 custom-select select-4-reset border-select" id="informacion-fiscal-periodo-select">
+					{{for informacionFiscal.tenencias}}
+					<option value="{{:periodo}}">{{:periodo}}</option>
+					{{/for}}
+				</select>
+			</div>
+		</div>
+		<div class="col-12 col-md-6 align-self-end mb-2 mt-4 mt-md-0">
+			<a href="#descargar" data-savefile="Poliza Zurich #{{:numero}} - Informacion fiscal YYYY.csv" data-saveobj="informacionfiscal" class="custom-link custom-link-inline "><i class="demo-icon icon-iconsapp_excel icon-left"></i>Descargar Excel</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 col-lg-8 col-xl-6">
+			<div class="title-3 mb-3"><span class="body-copy-bold">{{:producto}} {{:plan}}</span>{{if (producto || plan) }} / {{/if}}Póliza N° 246776</div>
+			<p class="body-copy-bold">Pagos realizados durante el año:</p>
+		</div>
+	</div>
+	{{for informacionFiscal.tenencias}}
+	<div class="informacion-fiscal-periodo" data-year="{{:periodo}}" {{if #index != 0}}style="display:none;"{{/if}} >
+	<div class="row">
+		<div class="col-12 col-lg-8 col-xl-6 custom-section mb-medium">
+			<div class="pre-table-container">
+				<div class="row">
+					<div class="col-6 col-md-6 align-self-center"><span class="body-copy-bold">Total de pagos:</span> período {{:periodo}}</div>
+					<div class="col-6 col-md-6 align-self-center"><span class="body-copy-bold">{{:~f(totalPagos,'pesos','$ ')}}</span></div>
+				</div>
+			</div>
+			<div class="table-container">
+				<table class="table custom-flex-table tabla-informacion-fiscal tabla-informacion-fiscal-pagos">
+					<thead class="thead-border">
+						<tr style="display:none;">{{!-- TR para export CSV --}}
+							<td>Total de pagos período {{:periodo}}:</td>
+							<td>{{:~f(totalPagos,'pesos','$ ')}}</td>
+						</tr>
+						<tr class="d-flex">
+							<th class="col-6 col-md-6 align-self-center" scope="col">Fecha</th>
+							<th class="col-6 col-md-6 align-self-center" scope="col">Importes</th>
+						</tr>
+					</thead>
+					<tbody>
+            			{{for fechasEimportes}}
+						<tr class="d-flex">
+							<th class="col-6 col-md-6" scope="row">{{:~f(fecha,'d/m/a') }}</th>
+							<td class="col-6 col-md-6">${{:~f(importe,'123.45')}}</td>
+						</tr>
+            			{{/for}}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 col-lg-8 col-xl-6 custom-section mb-large">
+			<p class="body-copy-bold">Saldo de la cuenta individual:</p>
+			<div class="pre-table-container">
+				<div class="row">
+					<div class="col-6 col-md-6"><span class="body-copy-bold">Total de tenencias:</span> al 31/12/{{:periodo}}</div>
+					<div class="col-6 col-md-6"><span class="body-copy-bold">{{:~f(totalTenencia,'pesos','$ ')}}</span></div>
+				</div>
+			</div>
+			<div class="table-container">
+				<table class="table tabla-informacion-fiscal custom-flex-table tabla-informacion-fiscal-cuenta">
+					<thead class="thead-border">
+						<tr style="display:none;">{{!-- TR para export CSV --}}
+							<td></td><td></td>
+						</tr>
+						<tr style="display:none;">{{!-- TR para export CSV --}}
+							<td>Total de tenencias al 31/12/{{:periodo}}:</td>
+							<td>{{:~f(totalTenencia,'pesos','$ ')}}</td>
+						</tr>
+						<tr class="d-flex">
+							<th class="col-6 col-md-6 align-self-center" scope="col">Fondo</th>
+							<th class="col-6 col-md-6 " scope="col">Importes (en pesos)</th>
+						</tr>
+					</thead>
+					<tbody>
+       					{{for fondos}}  
+						<tr class="d-flex">
+							<th class="col-6 col-md-6" scope="row">{{:nombre}}</th>
+							<td class="col-2 col-md-2">{{:~f(importe,'pesos','$ ')}}</td>
+							<td class="col-4 col-md-4 align-xs-right skip-from-csv"><a href="{{:link}}" class="mini-icon-link"><i class="demo-icon icon-iconsapp_pdf2 icon-left"></i><span>Descargar composición</span></a></td>
+						</tr>
+            			{{/for}}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	</div>
+	{{/for}}
+</div>
+
+<!-- Condiciones -->
+<div class="container-fluid bg-condiciones">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 custom-section mb-medium colapsible-icon mt-4 mt-md-5">
+        <p class="color-title">{{:txt.monedaPesosNota}}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,192 @@
+<div class="container section-ahorro-fondos">
+	<div class="row">
+		<div class="col-12">
+			<h1 class="title-1 mt-3 mb-3">Evolución de los fondos</h1>
+      <p class="mb-5 color-title">{{:txt.fondosDescripcion}}</p>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-5 col-md-4 col-lg-3 col-xl-2 mb-3">
+      <div class="datepicker-input-group line-input-text">
+        <label class="label">Ver desde:</label>
+        <input type="text" class="form-control datapicker-icon input-content" data-toggle="datepicker-fondos-desde">
+        <i class="demo-icon icon-iconsapp_arrow-down icon-right"></i>
+      </div>
+    </div>
+    <div class="col-5 col-md-4 col-lg-3 col-xl-2 mb-3">
+      <div class="datepicker-input-group line-input-text">
+        <label class="label">Hasta:</label>
+        <input type="text" class="form-control datapicker-icon input-content" data-toggle="datepicker-hasta">
+        <i class="demo-icon icon-iconsapp_arrow-down icon-right"></i>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 custom-padding-2 mb-3 align-self-center">
+      <a href="#descargar" data-savefile="Zurich - Evolucion Fondos al {{:fechaUltimaActualizacion}}.csv" data-saveobj="evolucionfondos" class="custom-link custom-link-inline "><i class="demo-icon icon-iconsapp_excel icon-left"></i>Descargar Excel</a>
+    </div>  
+  </div>
+
+  <div class="row">
+    <div class="col-12 custom-section mb-md-3 mb-4 ">
+      <div class="graph-wrapper">
+
+       <canvas
+       class="gfx-holder evolucionfondos-line"
+       style="height:390px;width:100%;"
+       ></canvas>
+
+     </div>
+     <div class="divider-medium divider-longx ifMobile my-3"></div>
+   </div>
+ </div>
+
+ <div class="row">
+  <div class="col-12">
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 custom-section mb-large has-link">
+    <div class="subtitle mb-4">Seleccione los fondos que quiera visualizar en el gráfico:</div>
+    <div class="secondary-navigation evolucion-fondos">
+      <ul class="nav" id="evolucion-fondos-secondary-nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" href="#evolucion-fondos-sec-panel-misfondos" data-toggle="tab" data-source="misFondos">Mis fondos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#evolucion-fondos-sec-panel-otrosfondos" data-toggle="tab" data-source="otrosFondos">Otros fondos disponibles</a>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-content evolucion-fondos" id="evolucion-fondos-secondary-nav-panels">
+      <div class="tab-pane fade show active" id="evolucion-fondos-sec-panel-misfondos" role="tabpanel" aria-labelledby="home-tab">
+        <div class="collapse-wrapper mb-4">
+          {{for fondos.misFondos itemVar='~ix'}}
+          <div class="collapse-item colapsible-list-header table-fondos-opt-1">
+            <ul class="list-inline colapsible-list-body mb-0 position-relative">
+              <li class="list-inline-item collapsable-item-1"><label class="custom-checkbox-container"><input type="checkbox" name="" value="" checked><span class="checkmark"></span><span class="list-rounded-item" style="background-color: {{:~bgColor([#index])}}"></span><span class="title">{{:nombre}}</span></label></li>
+              <li class="list-inline-item collapsable-item-2">Precio por unidad al {{:~f( ~root.fondos.fechaPrecio ,'d/m/a') }}: {{:~f(precioUnidadUsd,'usd') }}</li>
+              <li class="list-inline-item collapsable-item-3">Rendimiento últimos {{:~root.fondos.rendimientoPlazo}} meses: <span class="body-copy-bold">{{:~f(rendimientoAnual,'123.45') }}%</span></li>
+              <li class="list-inline-item collapsable-item-5 text-right colapsible-icon"><a class="collapse-link collapsed mini-icon-link" data-toggle="collapse" href="#fondos-collapse-opt-{{:#index}}" role="button" aria-expanded="false" aria-controls="collapseExample"><span>Ver detalle</span><i class="demo-icon icon-iconsapp_arrow-down icon-right"></i><i class="demo-icon icon-iconsapp_arrow-up icon-right"></i></a></li>
+            </ul>
+            <div class="collapse collapse-container" id="fondos-collapse-opt-{{:#index}}">
+              <div id="table-scroll-a4" class="table-scroll fondos-table-scroll-op1-1">
+                <div class="table-responsive">
+                  <table class="table table-gradient-bg table-style-3 small-table-scroll table-responsive-sm fondos-table-op1-1">
+                    <thead>
+                      <tr>
+                        <th class="fixed-side no-box-shadow"></th>
+                        <th colspan="12" class="fixed-side text-left no-box-shadow">Valor unidades</th>
+                      </tr>
+                      <tr>
+                        <th class="text-left fixed-side">Año y <span class="d-block">rendimiento (%)</span></th>
+
+                        <th>Enero</th>
+                        <th>Febrero</th>
+                        <th>Marzo</th>
+                        <th>Abril</th>
+                        <th>Mayo</th>
+                        <th>Junio</th>
+                        <th>Julio</th>
+                        <th>Agosto</th>
+                        <th>Septiembre</th>
+                        <th>Octubre</th>
+                        <th>Noviembre</th>
+                        <th>Diciembre</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {{for evolucionRendimiento}}
+                      <tr>
+                        <th class="fixed-side">{{:anio}} <span class="body-copy-bold">({{:~f(rendimiento,'123.45') }}%)</span></th>
+                        {{for evolucionPrecioUnidad itemVar='~dato'}}
+                        <td>{{:~dato}}</td>
+                        {{/for}}
+                      </tr>
+                      {{/for}}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <a href="{{: urlComposicion }}" class="custom-link after-table-link mt-3"><i class="demo-icon icon-iconsapp_excel icon-left"></i>Descargar composición del fondo</a>
+            </div>
+          </div>
+          {{/for}}
+        </div>
+        <a class="" data-toggle="tab" href="#panel-mis-fondos-vigentes"><i class="demo-icon icon-iconsapp_arrow-right icon-left"></i>Ver detalle de fondos</a>
+      </div>
+      <div class="tab-pane fade" id="evolucion-fondos-sec-panel-otrosfondos" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="collapse-wrapper mb-4">
+          {{for fondos.otrosFondos itemVar='~ix'}}
+          <div class="collapse-item colapsible-list-header table-fondos-opt-2">
+            <ul class="list-inline colapsible-list-body mb-0 position-relative">
+              <li class="list-inline-item collapsable-item-1"><label class="custom-checkbox-container"><input type="checkbox" name="" value="" checked><span class="checkmark"></span><span class="list-rounded-item" style="background-color: {{:~bgColor([#index])}}"></span><span class="title">{{:nombre}}</span></label></li>
+              <li class="list-inline-item collapsable-item-2">Precio por unidad al {{:~f( ~root.fondos.fechaPrecio ,'d/m/a') }}: {{:~f(precioUnidadUsd,'usd') }}</li>
+              <li class="list-inline-item collapsable-item-3">Rendimiento últimos 12 meses: <span class="body-copy-bold">{{:~f(rendimientoAnual,'123.45') }}%</span></li>
+              <li class="list-inline-item collapsable-item-4 ifDesktop"><a href="" data-toggle="modal" data-target="#modal-default" data-modalcontent="comoInvertirEnEsteFondo">Cómo invertir en este fondo</a></li>
+              <li class="list-inline-item collapsable-item-5 text-right colapsible-icon"><a class="collapse-link collapsed mini-icon-link" data-toggle="collapse" href="#fondos-collapse-opt-2-{{:#index}}" role="button" aria-expanded="false" aria-controls="collapseExample"><span>Ver detalle</span><i class="demo-icon icon-iconsapp_arrow-down icon-right"></i><i class="demo-icon icon-iconsapp_arrow-up icon-right"></i></a></li>
+            </ul>
+            <div class="collapse collapse-container pt-0 pt-lg-3" id="fondos-collapse-opt-2-{{:#index}}">
+              <a class="pb-4 ifTablet" href="" data-toggle="modal" data-target="#modal-default">Cómo invertir en este fondo</a>
+              <div id="table-scroll-a4" class="table-scroll fondos-table-scroll-op2-1">
+                <div class="table-responsive">
+                  <table class="table table-gradient-bg table-style-3 table-gradient-bg small-table-scroll table-responsive-sm fondos-table-op2-1">
+                    <thead>
+                      <tr>
+                        <th class="fixed-side"></th>
+                        <th colspan="12" class="fixed-side text-left no-box-shadow">Valor unidades</th>
+                      </tr>
+                      <tr>
+                        <th class="text-left fixed-side">Año y <span class="d-block">rendimiento (%)</span></th>
+                        <th>Enero</th>
+                        <th>Febrero</th>
+                        <th>Marzo</th>
+                        <th>Abril</th>
+                        <th>Mayo</th>
+                        <th>Junio</th>
+                        <th>Julio</th>
+                        <th>Agosto</th>
+                        <th>Septiembre</th>
+                        <th>Octubre</th>
+                        <th>Noviembre</th>
+                        <th>Diciembre</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {{for evolucionRendimiento}}
+                      <tr>
+                        <th class="fixed-side">{{:anio}} <span class="body-copy-bold">({{:~f(rendimiento,'123.45') }}%)</span></th>
+                        {{for evolucionPrecioUnidad itemVar='~dato'}}
+                        <td>{{:~dato}}</td>
+                        {{/for}}
+                      </tr>
+                      {{/for}}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <a href="{{: urlComposicion }}" class="custom-link after-table-link mt-3"><i class="demo-icon icon-iconsapp_excel icon-left"></i>Descargar composición del fondo</a>
+            </div>
+          </div>
+          {{/for}}
+        </div>
+        <a class="" data-toggle="tab" href="#panel-otros-fondos-vigentes"><i class="demo-icon icon-iconsapp_arrow-right icon-left"></i>Ver detalle de fondos</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Condiciones -->
+<div class="container-fluid bg-condiciones">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 custom-section mb-medium colapsible-icon mt-4 mt-md-5">
+        <div class="collapse-container collapse-crop-1 crop-text-1 collapse" id="info-ahorro-fondos" style="">
+          <p class="color-title">{{:txt.fondosNotaFinal}} </p>
+        </div>
+        <a class="collapse-link collapsed" data-toggle="collapse" href="#info-ahorro-fondos" id="crop-text-1"><span>Leer más</span><i class="demo-icon icon-iconsapp_arrow-down icon-right"></i><i class="demo-icon icon-iconsapp_arrow-up icon-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>

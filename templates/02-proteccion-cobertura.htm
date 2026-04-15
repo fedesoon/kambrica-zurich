@@ -1,0 +1,214 @@
+<div class="container mod-header section-proteccion-cobertura">
+	<div class="row">
+		<div class="col-md-7 col-lg-8">
+			<div class="title-1 mt-3 mb-md-5">Detalle de coberturas</div>
+		</div>
+		{{if cotizacionVrusMostrar}}
+		<div class="col-md-5 col-lg-4">
+			<div class="card-default card-vrus float-md-right ifDesktop">
+				<div class="button-modal btn-vrus">
+					<button type="button" class="btn btn-link" data-toggle="modal" data-target="#modal-default" data-modalcontent="cotizacionVrus">
+						<i class="demo-icon icon-iconsapp_info"></i>
+					</button>
+				</div>
+				<p class="subtitle">Cotización VRU$S: <strong>{{:~f(cotizacionVrus,'usd')}}</strong></p>
+				<p class="label">(valor referencia dolar)</p>
+			</div>
+		</div>
+		{{/if}}
+	</div>
+
+
+
+	<!-- TABS -->
+	<div class="row">
+		<div class="col-md-7 col-lg-12">
+		
+			{{if asegurados.length == 1}}
+			<p class="title-3">Asegurado:</p>
+			<p class="body-copy-bold">
+				{{for asegurados}}
+				{{:nombre}}
+				{{/for}}
+			</p>
+			{{else}}
+			<p class="title-3">Asegurados:</p>
+					<div class="secondary-navigation columns-50 evolucion-fondos mb-4">
+						<ul class="nav border-bottom" id="evolucion-fondos-secondary-nav-tabs">
+							{{for asegurados}}
+							<li class="nav-item">
+								<a class="nav-link {{if #index == 0}}active{{/if}}" href="#proteccion-asegurado-{{:#index}}" data-toggle="tab" >{{:nombre}}</a>
+							</li>
+							{{/for}}
+						</ul>
+					</div>
+			{{/if}}
+			
+		</div>
+	</div>
+	<!-- FIN TABS -->
+
+	<div class="row">
+		<div class="col-12 col-lg-10 mb-lg-4">
+			<!-- CONTENIDO TABS -->
+			<div class="tab-content">
+				{{for asegurados}}
+				<div class="tab-pane fade {{if #index == 0}}active show{{/if}}" id="proteccion-asegurado-{{:#index}}">
+					<!-- suma asegurados y beneficiarios -->
+					<div class="pt-3 pb-5">
+						<div class="resume-body d-block">
+							<div class="mb-3 mb-md-5">
+								<div class="aumont">
+									<span><p class="title-3">Suma asegurada por fallecimiento <span class="small d-block d-md-inline">(Suma Básica más Adicional)</span></p></span>
+									<span class="amount-main small">{{:~f(aseguradoSuma, aseguradoSumaMoneda, 'format')}}</span>
+									{{if aseguradoSumaMoneda != "pesos" }}
+									<span class="d-block d-lg-inline">Equivalente a <span class="body-copy-bold">{{:~f(aseguradoSumaEqPesos,'pesos','$ ')}}</span></span>
+									{{/if}}
+								</div>
+							</div>
+							
+							{{if cotizacionVrusMostrar}}
+							<div class="ifTablet">
+								<div class="resume-wrapper vrus-tablet card-vrus position-relative">
+									<div class="button-modal btn-vrus ifMobile">
+										<button type="button" class="btn btn-link" data-toggle="modal" data-target="#modal-default" data-modalcontent="cotizacionVrus">
+											<i class="demo-icon icon-iconsapp_info"></i>
+										</button>
+									</div>
+									<p class="subtitle">Cotización VRU$S: <strong>{{:~f(~root.cotizacionVrus,'usd')}}</strong><a href="#" class="ifDesktop" data-toggle="modal" data-target="#modal-default" data-modalcontent="cotizacionVrus"><i class="demo-icon icon-iconsapp_info icon-right"></i></a></p>
+									<p class="label">(valor referencia dolar)</p>
+								</div>
+							</div>
+							{{/if}}
+							
+							<div>
+								<div class="detail-header clearfix">
+									<div class="title-3 float-md-left">Beneficiarios</div>
+								</div>
+								<div class="beneficiario-items">
+									<ul class="row mb-0">
+										{{for beneficiarios}}
+										<li class="col-12 col-lg-8 my-3 my-md-0 beneficiario-item">
+											<ul class="row">
+												<li class="col-6 col-sm-3 pb-4"><p class="label mb-0">Beneficiario:</p><span class="body-copy-bold">{{:nombre}}</span></li>
+												<li class="col-6 col-sm-3 pb-4"><p class="label mb-0">Vínculo:</p><span class="body-copy-bold">{{:rol}}</span></li>
+												<li class="col-6 col-sm-3 pb-4"><p class="label mb-0">Fecha de inicio de vigencia:</p><span class="body-copy-bold">{{:~f(vigencia,'d/m/a') }}</span></li>
+												<li class="col-6 col-sm-3 pb-4"><p class="label mb-0">Porcentaje:</p><span class="body-copy-bold">{{:porcentaje}} %</span></li>
+											</ul>
+										</li>
+										{{/for}}
+									</ul>
+								</div>
+							</div>
+
+							<a href="" data-toggle="modal" data-target="#modal-default" data-modalcontent="queHacerSiniestro" class="custom-link">Qué hacer en caso de siniestro</a>
+						</div>
+					</div>
+					<!-- Título beneficios -->
+					<div class="detail-header clearfix">
+						<div class="title-3 float-md-left">Beneficios incluidos</div>
+					</div>
+					<!-- Tabla beneficios -->
+					<div id="table-scroll" class="table-scroll beneficios-table-scroll mb-4">
+						<div class="table-responsive">
+							<div class="table-container">
+								<table class="table table-style-1 table-gradient-bg beneficios-table listaBeneficiosIncluidos">
+									<thead class="thead-border">
+										<tr class="">
+											<th scope="col" class="fixed-side pl-0">Beneficios</th>
+											<th scope="col">Monto {{!-- ({{:aseguradoSumaMoneda}}) --}}</th>
+											{{if ~root.beneficiosValorVrusMostrar}}<th scope="col">Monto (VRU$S)</th>{{/if}}
+											<th scope="col">Edad máxima</th>
+										</tr>
+									</thead>
+									
+									<tbody>
+										{{for beneficiosIncluidos}}
+										<tr>
+											<th scope="row" class="fixed-side nombreBeneficio">{{:beneficio}}</th>
+											
+											<td>{{:~f(monto, #parent.parent.data.aseguradoSumaMoneda ,'format') }}</td>
+											
+											{{if ~root.beneficiosValorVrusMostrar}}<td> {{:~f(valorVrus,'123', 'VRU$S ') }}</td>{{/if}}
+											
+											<td>{{:edadMaxima}}</td>
+										</tr>
+										{{/for}}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- Detalle de beneficios -->
+					<div class="listaBeneficiosDetalle">
+					<div class="simple-collapse-mobile">
+						<div class="collapse-item no-border-md mb-md-4">
+							<a class="collapsed ifMobile" data-toggle="collapse" href="#collapseItem-01" role="button" aria-expanded="false" aria-controls="collapseExample">
+								<i class="demo-icon icon-iconsapp_primary-arrow-down icon-left opener"></i><span>Detalle de beneficios incluidos</span>
+							</a> 
+							<div class="collapse dont-collapse-sm colapsible-icon" id="collapseItem-01" style="">
+								<div class="detail-info">
+									<div class="detail-header clearfix ifDesktop">
+										<div class="title-3 float-md-left">Detalle de beneficios incluidos</div>
+									</div>
+									<div class="detail-body">
+										<div class="collapse-container" id="condiciones-particulares">
+											<div class="beneficiosIncluidos">
+											{{for ~root.Coberturabeneficios}}
+											<div class="itemBeneficio">
+												<p class="body-copy-bold p-subtitle">{{:beneficio}}</p>
+												{{:descripcion}}
+											</div>
+											{{/for}}
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="collapse-item no-border-md mb-md-4">
+							<a class="collapsed ifMobile" data-toggle="collapse" href="#collapseItem-02" role="button" aria-expanded="false" aria-controls="collapseExample">
+								<i class="demo-icon icon-iconsapp_primary-arrow-down icon-left opener"></i><span>Beneficios NO incluidos</span>
+							</a> 
+							<div class="collapse dont-collapse-sm colapsible-icon" id="collapseItem-02" style="">
+								<div class="detail-info">
+									<div class="detail-header clearfix ifDesktop">
+										<div class="title-3 float-md-left">Beneficios NO incluidos</div>
+									</div>
+									<div class="detail-body">
+										<div class="collapse-container" id="condiciones-particulares">
+											<div class="beneficiosNoIncluidos">
+											{{for ~root.Coberturabeneficios}}
+											<div class="itemBeneficio">
+												<p class="body-copy-bold p-subtitle">{{:beneficio}}</p>
+												<p>{{:descripcion}}</p>
+												<a href="" data-toggle="modal" data-target="#modal-default" data-modalcontent="agregarAPoliza" class="mt-1">Cómo agregar a mi póliza</a>
+											</div>
+											{{/for}}
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				{{/for}}
+			</div>
+			<!-- CONTENIDO TABS -->
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 col-lg-8 mb-3 mb-md-5">
+			<div class="detail-header clearfix ifDesktop">
+				<div class="title-3 float-md-left">Qué hacer en caso de siniestro</div>
+			</div>
+			<div class="pt-3">
+				<p>1) Descagar, imprimir y completar el formulario de <a href="" data-toggle="modal" data-target="#modal-default">siniestro</a><br>2) Acercate a la sucursal de Zurich ubicada en Cerrito 1010 con el formulario impreso y completado, comprobante en original del Aval de domicilio actual y fotocopia DNI frente y dorso del titular.<br></p>
+				<p class="mt-1">Para mayor información comunicate con tu asesor o llamamos al <span class="body-copy-bold">0800 111 333</span></p>
+				<button type="button" class="btn btn-primary">Descargar formulario</button>
+			</div>
+		</div>
+	</div>
+</div>

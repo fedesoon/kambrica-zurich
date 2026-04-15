@@ -1,0 +1,24 @@
+<div class="container section-ahorro-gestiones custom-section mb-large">
+	<div class="row">
+	<div class="col-md-8">
+		<div class="title-1 mt-3">Gestiones</div>
+	</div>
+</div>
+	<div>
+		<p class="mb-4">{{:txt.gestionesSubtitulo}}</p>
+	</div>
+	<div class="simple-collapse">
+		{{for gestionesTxt}}
+		<div class="collapse-item">
+			<a class="collapsed collapse-item-color" data-toggle="collapse" href="#collapseItem-{{:#index}}" role="button" aria-expanded="false" aria-controls="collapseExample">
+				<i class="demo-icon opener icon-iconsapp_primary-arrow-down icon-left"></i>
+				<span>{{:titulo}}</span>
+			</a>
+			<div class="collapse" id="collapseItem-{{:#index}}" style="">
+				{{:descripcion}}
+			</div>
+		</div>
+		{{/for}}
+	</div>
+</div>
+

@@ -1,0 +1,189 @@
+{
+"txt":{
+	"evolProductoBoxH":"Evolución del saldo de mi cuenta",
+	"evolProductoBoxP":"Durante los primeros años el saldo de la cuenta individual del plan contratado suele ser inferior al total de los pagos acumulados. Esto se debe a que durante los primeros años la asignación de los aportes a la cuenta individual es menor, para afrontar gastos iniciales de la póliza. La comparación entre ambos valores también se ve afectada por los rescates parciales que se pueden haber realizado o cualquier otra alteración en el plan de pagos original. El siguiente gráfico ilustra el comportamiento típico de estas dos variables:",
+	"resumenNotaFinal": "Se deja expresa constancia que ciertos instrumentos que forman parte de los Fondos de Inversión nominados en Dólares serán adquiridos en Pesos según cotización de mercado vigente en esa moneda, aun cuando su activo subyacente esté nominado en Dólares. Asimismo, la valuación de tales instrumentos tendrá en cuenta la cotización vigente en Pesos. <br><br>El precio de la unidad del Fondo nominado en Dólares se calcula en base al valor de mercado en Pesos de los instrumentos o activos financieros que lo integran, dividido por la cotización del Dólar del Banco de la Nación Argentina (tipo de cambio comprador vigente al cierre del día hábil inmediato anterior) y por la cantidad total de unidades existentes en cada Fondo.",
+	"fondosDescripcion": "Los valores de las unidades de los fondos se expresan en la moneda de cada fondo. El rendimiento anual expresa la variación porcentual de cada fondo en los 12 meses anteriores al momento en que se está expresando (salvo que el fondo no tuviera 12 meses de historia en cuyo caso se presenta el rendimiento desde el inicio del fondo).",
+	"fondosNotaFinal": "El precio de las unidades de cada fondo se expresa en la moneda de inversión de la póliza.<br><br>Los rendimientos pasados no constituyen una garantía de rentabilidad futura. El valor de cualquier inversión puede tanto aumentar como disminuir en cualquier período de tiempo.<br>Se deja expresa constancia que ciertos instrumentos que forman parte de los Fondos de Inversión nominados en Dólares serán adquiridos en Pesos según cotización de mercado vigente en esa moneda, aun cuando su activo subyacente esté nominado en Dólares. Asimismo, la valuación de tales instrumentos tendrá en cuenta la cotización vigente en Pesos.<br>El precio de la unidad del Fondo nominado en Dólares se calcula en base al valor de mercado en Pesos de los instrumentos o activos financieros que lo integran, dividido por la cotización del Dólar del Banco de la Nación Argentina (tipo de cambio comprador vigente al cierre del día hábil inmediato anterior) y por la cantidad total de unidades existentes en cada Fondo.",
+	"detalleDePolizaNotaFinal": "Seguros emitidos por ZURICH INTERNATIONAL LIFE LIMITED SUCURSAL ARGENTINA, CUIT 30-67965715-8, Cerrito 1010, CABA.",
+	"cuentaIndividualRescate":"El saldo de la cuenta individual no constituye valor de rescate",
+	"monedaNota":"Referencias: <b>$</b> Pesos argentinos. <b>USD</b> Dólares estadounidenses",
+	"monedaPesosNota":"Los valores que figuran arriba están expresados en Pesos argentinos",
+	"cuentaIndividualNotaFinal":"El precio de las unidades y el total acumulado en cada fondo se expresa en la moneda de inversión de la póliza<br>Se deja expresa constancia que ciertos instrumentos que forman parte de los Fondos de Inversión nominados en Dólares serán adquiridos en Pesos según cotización de mercado vigente en esa moneda, aun cuando su activo subyacente esté nominado en Dólares. Asimismo, la valuación de tales instrumentos tendrá en cuenta la cotización vigente en Pesos.<br>El precio de la unidad del Fondo nominado en Dólares se calcula en base al valor de mercado en Pesos de los instrumentos o activos financieros que lo integran, dividido por la cotización del Dólar del Banco de la Nación Argentina (tipo de cambio comprador vigente al cierre del día hábil inmediato anterior) y por la cantidad total de unidades existentes en cada Fondo.",
+	"cuentaIndividualsubtitulo":"El precio de las unidades y el total acumulado en cada fondo se expresa en la moneda de inversión de la póliza.",
+	"aportesNotaFinal":"El precio de las unidades y el total acumulado en cada fondo se expresa en la moneda de inversión de la póliza.<br><br>Prima Neta de Impuestos y Sellados. La fecha de asignación de cada prima a la Cuenta Individual es el día siguiente a la recepción de la prima por la Compañía. Para la cotización del dólar se tomó la cotización del Banco de la Nación Argentina tipo de cambio divisa comprador vigente al cierre del día hábil inmediato anterior.<br>Para mayor información comunicate con nuestro Centro de Contacto al 0800 333 Zurich (9874).",
+	"aportesTablaNotaFinal":"El precio de las unidades se expresa en la moneda de inversión de la póliza",
+	"detalleDePolizaNotaFinal": "Seguros emitidos por ZURICH INTERNATIONAL LIFE LIMITED SUCURSAL ARGENTINA, CUIT 30-67965715-8, Cerrito 1010, CABA.",
+	"gestionesSubtitulo":"A continuación te brindamos la información y la documentación que necesitás para realizar las siguientes gestiones:",
+	"graficoNotaFinal":"En el gráfico anterior se muestran los valores correspondientes al último día de cada mes. Las líneas que unen los puntos son completadas a modo ilustrativo y no representan los valores que toma la serie entre puntos.",
+	"detalleFondosNotaFinal1":"<div class='label title-color'><p>*Bienes transables internacionalmente<br>** Fondo disponible para productos contratados a partir del 04/04/2012</p><dl><dt><p>Notas:</p></dt><dd>1. Los fondos podrán constituirse con los activos mencionados en forma directa y/o por fondos comunes de inversión que inviertan en los mismos.</dd><dd>2. Las tasas que se muestran son estimadas con fines ilustrativos, netas del cargo operativo.</dd></dl></div>",
+	"detalleFondosNotaFinal2":"<div class='label title-color'><p>*Bienes transables internacionalmente<br>** Fondo disponible para productos contratados a partir del 04/04/2012</p><dl><dt><p>Notas:</p></dt><dd>1. Los fondos podrán constituirse con los activos mencionados en forma directa y/o por fondos comunes de inversión que inviertan en los mismos.</dd><dd>2. Las tasas que se muestran son estimadas con fines ilustrativos, netas del cargo operativo.</dd></dl></div>"
+},
+
+"footer":{
+	"firstColumn":"<div>Atención al cliente: <span class='body-copy-bold'>0800-333-9874</span></div><div><a href='#'>www.zurich.com.ar</a></div>",
+	"secondColumn":"<ul class='list-inline mb-1'><li class='list-inline-item'><a href='https://www.zurich.com.ar/es-ar/privacidad-y-legales' target='_blank'>Privacidad y Legales</a></li><li class='list-inline-item'><a href='https://www.zurich.com.ar/es-ar/personas/proteccion-de-datos' target='_blank'>Protección de Datos</a></li></ul><p>Copyright © 2019 Zurich Argentina</p>"
+		},
+
+
+"modal":{
+
+	"cotizacionVrus":{
+		"titulo":"Cotización VRU$S",
+		"body": "<p>VRU$S es un valor de referencia a Dólares y su equivalencia en Pesos se calcula utilizando el tipo de cambio vendedor del Dólar vigente en la compañía los días 15 o hábil anterior de cada mes. Se utiliza para actualizar el valor en pesos de los futuros pagos y de los beneficios.</p>",
+		"footer":"<button type='button' class='btn btn-primary' data-dismiss='modal'>OK</button>"
+	},
+
+	"cuentaIndividualInversionPesos":{
+		"titulo":"Cómo se calcula el saldo de mi cuenta individual",
+		"body": "El total expresado se calcula multiplicando el total de unidades de cada fondo de inversión por el valor de la unidad.",
+		"footer":"<button type='button' class='btn btn-primary' data-dismiss='modal'>OK</button>"
+	},
+	"cuentaIndividualInversionUSD":{
+		"titulo":"Cómo se calcula el saldo de mi cuenta individual",
+		"body": "El total expresado en dólares se calcula multiplicando el total de unidades de cada fondo de inversión por el valor de la unidad. El total expresado en Pesos se calcula multiplicando el total expresado en Dólares por la cotización del Dólar del Banco de la Nación Argentina (tipo de cambio divisa comprador) al cierre de las operaciones del día hábil inmediato anterior a la fecha de la consulta.",
+		"footer":"<button type='button' class='btn btn-primary' data-dismiss='modal'>OK</button>"
+	},
+	
+		"cuentaIndividualProteccion":{
+		"titulo":"Cómo interpretar el saldo de mi cuenta individual",
+		"body": "Su seguro de vida Options está concebido para darle protección a lo largo de toda su vida. Teniendo en cuenta que el costo del seguro es cada vez mayor a medida que pasa el tiempo, se ha calculado una prima nivelada que le permita pagar siempre lo mismo y no tener que afrontar cargos más altos en los años futuros.<br> Para eso, los fondos excedentes de sus aportes van dirigidos a una cuenta individual de la cual se extraerá el costo adicional de coberturas cuando sea necesario. ",
+		"footer":"<button type='button' class='btn btn-primary' data-dismiss='modal'>OK</button>"
+	},
+		"evolucionSaldoDeMiCuenta":{
+		"titulo":"Evolución del saldo de mi cuenta",
+		"body": "Durante los primeros años el saldo de la cuenta individual del plan contratado suele ser inferior al total de los pagos acumulados. Esto se debe a que durante los primeros años la asignación de los aportes a la cuenta individual es menor, para afrontar gastos iniciales de la póliza.<br>La comparación entre ambos valores también se ve afectada por los rescates parciales que se pueden haber realizado o cualquier otra alteración en el plan de pagos original.<br><br>El siguiente gráfico ilustra el comportamiento típico de estas dos variables:<br><br><img src='img/graph-info-modal.png' alt='Evolución del saldo de mi cuenta' height='auto' style='width:100%'>",
+		"footer":"<button type='button' class='btn btn-primary' data-dismiss='modal'>OK</button>"
+	},
+		"queHacerSiniestro":{
+		"titulo":"Qué hacer en caso de siniestro",
+		"body": "Los requisitos para presentar un siniestro según las características del mismo están en <a href='https://www.zurich.com.ar/es-ar/personas/productos-y-servicios/vida'>zurich.com.ar/es-ar/personas/productos-y-servicios/vida</a> y luego en la sección Siniestros al pie de la página.<br><br>Para mayor información, comunicate con tu Productor Asesor o llamanos al 0800-333-987424",
+		"footer":"<button type='button' class='btn btn-primary' data-dismiss='modal'>OK</button>"
+	},
+		"distribucionFondos":{
+		"titulo":"Cómo cambiar la distribución de los fondos",
+		"body": "Consectetur adipiscing elit lectus, tempus orci morbi pretium penatibus vulputate diam urna, tincidunt vivamus fusce sapien rutrum purus eget. Arcu mattis metus molestie dui sed orci ac dignissim rhoncus est non, facilisis habitasse curae venenatis phasellus imperdiet aliquet facilisi donec. Quis laoreet augue velit dignissim nam torquent himenaeos sed, duis et habitasse nostra sagittis vivamus cubilia primis, tincidunt pretium orci natoque dictumst non inceptos.",
+		"footer":"<button type='button' class='btn btn-primary' data-dismiss='modal'>OK</button>"
+	},
+		"cambiarBeneficios":{
+		"titulo":"Cambiar o agregar beneficiarios",
+		"body": "Para gestionar un cambio de beneficiarios deberás:<br><br>1) Descagar, imprimir y completar el formulario de <a href='files/download.php?file=formulario-cambio-beneficiario'>solicitud cambio de beneficiario</a><br>2) Acercate a la sucursal de Zurich ubicada en Cerrito 1010 con el formulario impreso y completado, comprobante en original del Aval de domicilio actual y fotocopia DNI frente y dorso del titular.<br><br>Para mayor información comunicate con tu asesor o llamamos al <br>0800 111 33",
+		"footer":"<button type='button' class='btn btn-primary' data-dismiss='modal'>OK</button>"
+	},
+		"cambiarMetodoDePago":{
+		"titulo":"Editar método de pago",
+		"body": "Para gestionar un cambio de método de pago deberás:<br><br>1) Descagar, imprimir y completar el formulario de <a href='files/download.php?file=formulario-cambio-metodo-de-pago'>solicitud cambio de método de pago</a><br>2) Acercate a la sucursal de Zurich ubicada en Cerrito 1010 con el formulario impreso y completado, comprobante en original del Aval de domicilio actual y fotocopia DNI frente y dorso del titular.<br><br>Para mayor información comunicate con tu asesor o llamamos al 0800 111 333.",
+		"footer":"<button type='button' class='btn btn-primary' data-dismiss='modal'>OK</button>"
+	},
+		"cambiarDatosPersonales":{
+		"titulo":"Editar datos personales",
+		"body": "Para gestionar un cambio de datos personales deberás:<br><br>1) Descagar, imprimir y completar el formulario de <a href='files/download.php?file=formulario-cambio-datos-personales'>solicitud cambio de datos personales</a><br>2) Acercate a la sucursal de Zurich ubicada en Cerrito 1010 con el formulario impreso y completado, comprobante en original del Aval de domicilio actual y fotocopia DNI frente y dorso del titular.<br><br>Para mayor información comunicate con tu asesor o llamamos al 0800 111 333.",
+		"footer":"<button type='button' class='btn btn-primary' data-dismiss='modal'>OK</button>"
+	},
+		"agregarAPoliza":{
+		"titulo":"Agregar a mi póliza",
+		"body": "Para gestionar una actualización de tu póliza deberás:<br><br>1) Descagar, imprimir y completar el formulario de <a href='files/download.php?file=formulario-solicitud-actualizacion-poliza'>solicitud de actualización de póliza</a><br>2) Acercate a la sucursal de Zurich ubicada en Cerrito 1010 con el formulario impreso y completado, comprobante en original del Aval de domicilio actual y fotocopia DNI frente y dorso del titular.<br><br>Para mayor información comunicate con tu asesor o llamamos al 0800 111 333.",
+		"footer":"<button type='button' class='btn btn-primary' data-dismiss='modal'>OK</button>"
+	},
+		"comoHacerUnNuevoAporte":{
+		"titulo":"Cómo hacer un nuevo aporte",
+		"body": "Para realizar incrementos de prima, por favor contactate con tu Productor Asesor para que pueda acompañarte en el proceso.<br><br>Ante cualquier duda, podés llamarnos al 0800-333-987424 para asesorarte.",
+		"footer":"<button type='button' class='btn btn-primary' data-dismiss='modal'>OK</button>"	
+	},
+
+		"comoInvertirEnEsteFondo":{
+		"titulo":"Cómo invertir en este fondo",
+		"body": "Humanitatis per seacula quarta decima et quinta decima eodem, modo typi qui. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie; consequat vel illum.",
+		"footer":"<button type='button' class='btn btn-primary' data-dismiss='modal'>OK</button>"
+	},
+		"aportesLegalesDolar":{
+		"titulo":"Equivalencia en USD",
+		"body": "Incluir acá los legales para el equivalente en USD.",
+		"footer":"<button type='button' class='btn btn-primary' data-dismiss='modal'>OK</button>"
+	}
+	
+},
+
+"gestionesTxt":[
+		{	"collapseItem": "01",
+			"titulo": "Cómo cambiar el domicilio",
+			"descripcion": "<p>Podés cambiar el domicilio particular, el de correspondencia o ambos.</p><p>Tenés que llenar el <a href='https://www.zurich.com.ar/_/media/dbe/argentina/docs/formularios-vida/datos-personales_dma-ac-7.pdf?la=es-ar&hash=4B7BCEF7C93BA06D23133F2A94D51E5C9E4D274F'>formulario &quot;cambio de datos personales&quot;</a>, firmarlo, acompañarlo por los correspondientes avales y enviarlo a la compañía. En el formulario se detallan los avales a presentar.</p><p>El formulario firmado puede ser escaneado y enviado por email a servicioalcliente@zurich.com pero si querés modificar el domicilio particular, el aval tiene que llegar en original a la compañía, ya sea personalmente o por correo postal a cerrito 1010, CABA, CP: 1010.</p><p>Alternativamente, podrés contactar a tu Productor Asesor para que te asista con esta gestión.</p>"
+		},
+		{	"collapseItem": "02",
+			"titulo": "Cómo cambiar datos personales",
+			"descripcion": "<p>Tenés que llenar este <a href='https://www.zurich.com.ar/_/media/dbe/argentina/docs/formularios-vida/datos-personales_dma-ac-7.pdf?la=es-ar&hash=4B7BCEF7C93BA06D23133F2A94D51E5C9E4D274F'>formulario &quot;cambio de datos personales&quot;</a>, firmarlo, acompañarlo por los correspondientes avales y enviarlo a la compañía. En el formulario se detallan los avales a presentar.</p><p>El formulario firmado puede ser escaneado y enviado por email a servicioalcliente@zurich.com o en original a la compañía, ya sea personalmente o por correo postal a cerrito 1010, CABA, CP: 1010.</p><p>Alternativamente, podrés contactar a tu Productor Asesor para que te asista con esta gestión.</p>"
+		},
+		{	"collapseItem": "03",
+			"titulo": " Cómo incrementar prima o hacer un aporte adicional",
+			"descripcion": "<p>Para realizar incrementos de prima, por favor contactate con tu Productor Asesor para que pueda acompañarte en el proceso.</p><p>Ante cualquier duda, podés llamarnos al 0800-333-987424 para asesorarte.</p>"
+		},
+		{	"collapseItem": "04",
+			"titulo": " Cómo hacer un rescate total o parcial",
+			"descripcion": "<p>Para realizar rescates, por favor contactate con tu Productor Asesor para que pueda acompañarte en el proceso.</p><p>Ante cualquier duda, podés llamarnos al 0800-333-987424 para asesorarte.</p>"
+		},
+		{	"collapseItem": "05",
+			"titulo": "Cómo agregar o cambiar beneficiarios",
+			"descripcion": "Podés cambiar a tus beneficiarios principales o a los beneficiarios contingentes, que son aquellos que se convierten en beneficiarios si alguno de los principales fallece.</p><p>Tenés que llenar el <a href='https://www.zurich.com.ar/_/media/dbe/argentina/docs/formularios-vida/datos-personales_dma-ac-7.pdf?la=es-ar&hash=4B7BCEF7C93BA06D23133F2A94D51E5C9E4D274F'>formulario &quot;cambio de datos personales&quot;</a>, firmarlo y enviarlo a la compañía.</p><p>La documentación puede ser enviada escaneada por mail a servicioalcliente@zurich.com o por correo postal a nuestras oficinas en cerrito 1010, CABA, CP: 1010.</p><p>Prestá atención a los documentos adicionales a adjuntar con el formulario que se detallan en el mismo.</p><p>Alternativamente, podrés contactar a tu Productor Asesor para que te asista con esta gestión.</p>"
+		},
+		{	"collapseItem": "06",
+			"titulo": " Cómo cambiar el método de pago",
+			"descripcion": "<p>Tenés que llenar el <a href='https://www.zurich.com.ar/_/media/dbe/argentina/docs/formularios-vida/datos-personales_dma-ac-7.pdf?la=es-ar&hash=4B7BCEF7C93BA06D23133F2A94D51E5C9E4D274F'>formulario &quot;cambio de datos personales&quot;</a>, firmarlo y enviarlo a la compañía junto los correspondientes avales.</p><p>El envío podrá ser escaneado por mail a servicioalcliente@zurich.com, o por correo postal a nuestras oficinas en cerrito 1010, CABA, CP 1010.</p><p>En el formulario se detallan los avales a presentar.</p><p>Alternativamente, podrés contactar a tu Productor Asesor para que te asista con esta gestión.</p>"
+		},
+		{	"collapseItem": "07",
+			"titulo": "Cómo cambiar la estrategia de fondos de inversión",
+			"descripcion": "<p>Tenés que llenar el <a href='https://www.zurich.com.ar/_/media/dbe/argentina/docs/formularios-vida/datos-personales_dma-ac-7.pdf?la=es-ar&hash=4B7BCEF7C93BA06D23133F2A94D51E5C9E4D274F'>formulario &quot;cambio de datos personales&quot;</a>, firmarlo y enviarlo a la compañía.</p><p>La documentación puede ser enviada escaneada por mail a servicioalcliente@zurich.com o por correo postal a nuestras oficinas en cerrito 1010, CABA, CP: 1010.</p><p>Prestá atención a los documentos adicionales a adjuntar con el formulario que se detallan en el mismo.</p><p>Alternativamente, podrés contactar a tu Productor Asesor para que te asista con esta gestión.</p>"
+		},
+		{	"collapseItem": "08",
+			"titulo": "Cómo agregar o cambiar coberturas",
+			"descripcion": "<p>Para actualizar tus coberturas vigentes, por favor contactate con tu Productor Asesor para que pueda acompañarte en el proceso.</p><p>Ante cualquier duda, podés llamarnos al 0800-333-987424 para asesorarte.</p>"
+		},
+		{	"collapseItem": "09",
+			"titulo": "Qué hacer en caso de siniestro",
+			"descripcion": "<p>Los requisitos para presentar un siniestro según las características del mismo están en <a href='https://www.zurich.com.ar/es-ar/personas/productos-y-servicios/vida'>https://www.zurich.com.ar/es-ar/personas/productos-y-servicios/vida</a> y luego en la sección Siniestros al pie de la página.</p><p>Para mayor información, comunicate con tu Productor Asesor o llamanos al 0800-333-987424</p>"
+		}
+	],
+"documentacionLinks":[
+		{	"documentoTitulo": "Documento1",
+			"documentoLink": "https://zurich.com.ar/"
+		},
+		{	"documentoTitulo": "Documento2",
+			"documentoLink": "https://zurich.com.ar/"
+		},
+		{	"documentoTitulo": "Documento3",
+			"documentoLink": "https://zurich.com.ar/"
+		}
+	],
+"Coberturabeneficios": [
+		{	"beneficio":"Fallecimiento",
+			"descripcion":"<p>En caso de fallecimiento del asegurado, se pagará la suma entre el Seguro de Vida Básico y el Seguro de Vida Adicional o el saldo de la cuenta individual, el que fuera mayor.</p><p>Edad máxima: sin límite.</p>"
+		},
+		{	"beneficio":"Enfermedad Terminal",
+			"descripcion":"<p>Ante el diagnóstico de una enfermedad terminal (expectativa de vida menor a 6 meses), el asegurado podrá obtener un anticipo de hasta el 50% del Seguro de Vida.</p><p>Edad máxima: sin límite.</p>"
+		},
+		{	"beneficio":"Renta Familiar",
+			"descripcion":"<p>Podrás elegir un nivel de protección adicional para un período de tiempo en el que tu familia requerirá mayores ingresos. Si el fallecimiento ocurriera en ese período, la renta se pagará hasta su finalización.<br>La cobertura se contrata por una determinada cantidad de años que será decreciente y una suma por año que será fija. Si el asegurado falleciera, se le pagará a los beneficiarios el múltiplo entre la cantidad de años que quedaran vigentes (si hubiera) y la suma por año contratada.</p><p>Edad máxima: Máximo 25 años de contratación.</p>"
+		},
+		{	"beneficio":"Enfermedad Grave",
+			"descripcion":"<p>En caso de diagnóstico de alguna de las enfermedades cubiertas, el asegurado podrá contar con un capital para afrontar gastos imprevistos. El capital será descontado de la suma asegurada de fallecimiento. Además, se podrá solicitar dejar de pagar primas de por vida.<br>Enfermedades graves cubiertas: Cáncer, Cirugía por enfermedad coronaria, Ataque cardíaco, Insuficiencia renal, Apoplejías, Trasplante de órganos vitales, Esclerosis múltiple.</p><p>Edad máxima: sin límite.</p>"
+		},
+		{	"beneficio":"Exención del pago de primas",
+			"descripcion":"<p>Zurich continuará acreditando los aportes regulares,  permitiendo la continuidad del plan, antes una incapacidad por enfermedad y/o accidente, que no le permita desempeñar su ocupación habitual o toda  otra ocupación para la que haya estado razonablemente capacitado por su formación, educación o experiencia.</p><p>Edad máxima: 65 años.</p>"
+		},
+		{	"beneficio":"Hospitalización",
+			"descripcion":"<p>Zurich otorga un monto por día de internación, para períodos mayores a los tres días. No cubre los siguientes motivos: Alcoholismo, drogadicción, Alergias, Cirugía estética o plástica (excepto por accidente), Desórdenes nerviosos o mentales, Curas de reposo, cuarentena o aislamiento, Exámenes odontológicos, Embarazo o parto.</p><p>Edad máxima: 65 años.</p>"
+		},
+		{	"beneficio":"Muerte Accidental",
+			"descripcion":"<p>Se abonará el monto contratado, además del Seguro de Vida, si el fallecimiento sucediera como consecuencia directa de una lesión corporal accidental y dentro de los 30 días de haber sufrido el accidente.</p><p>Edad máxima: 65 años.</p>"
+		},
+		{	"beneficio":"Pérdida de miembros",
+			"descripcion":"<p>Prevé el pago de una suma de dinero ante el imprevisto de la pérdida accidental de miembros.</p><p>Edad máxima: 65 años.</p>"
+		},
+		{	"beneficio":"Accidente de aviación",
+			"descripcion":"<p>Se duplicará la protección por fallecimiento en caso de accidente en un vuelo de línea comercial.</p><p>Edad máxima: sin límite.</p>"
+		},
+		{	"beneficio":"Invalidez total y permanente",
+			"descripcion":"<p>Suma única que se pagará en el caso de que el Asegurado sufra una invalidez total y permanente, que le impida volver a desempeñarse dentro de su profesión o cualquier otra actividad.</p><p>Edad máxima: 65 años.</p>"
+		}
+	]
+	
+}

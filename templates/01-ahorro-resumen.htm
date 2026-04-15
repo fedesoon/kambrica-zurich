@@ -1,0 +1,345 @@
+<div class="container section-ahorro-resumen {{if !(cuentaIndividual.evolucionMostrarNota) }}no-info-container{{/if}}">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="title-1 mt-3">
+      	{{:producto}} {{:plan}}
+      	<span class="small">Póliza N° {{:numero}}</span>
+      </div>
+    </div>
+    {{if cotizacionVrusMostrar}}
+    <div class="col-md-4">
+      <div class="card-default card-vrus float-md-right ifDesktop">
+        <div class="button-modal btn-vrus">
+          <button type="button" class="btn btn-link" data-toggle="modal" data-target="#modal-default" data-modalcontent="cotizacionVrus">
+            <i class="demo-icon icon-iconsapp_info"></i>
+          </button>
+        </div>
+        <p class="subtitle">Cotización VRU$S: <strong>{{:~f(cotizacionVrus,'vrus') }}</strong></p>
+        <p class="label">(valor referencia dolar)</p>
+      </div>
+    </div>
+    {{/if}}
+  </div>
+  <div class="row mb-3">
+    <div class="col-12">
+      <div class="h-list-simple">
+        <ul class="list-inline">
+          <li class="list-inline-item">Fecha inicial: <span class="body-copy-bold">{{:~f(fechaInicial,'d/m/a') }}</span></li>
+          <li class="list-inline-item">Vigencia final: <span class="body-copy-bold">{{:fechaFinalizaString}}</span></li>
+          {{if (plazo)}}<li class="list-inline-item">Plazo: <span class="body-copy-bold">{{:plazo}}</span></li>{{/if}}
+          <li class="list-inline-item link"><a href="#panel-detalle-de-poliza" data-toggle="tab" class="custom-link"><i class="demo-icon icon-iconsapp_arrow-right icon-left"></i>Ver detalle de póliza</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 order-md-2">
+      <div class="row">
+        <div class="divider-medium divider-long ifMobile"></div>
+        
+        {{if cuentaIndividual.saldoPesos > 0}}
+        <div class="col-if-no-info-container resume-change-col-1 col-12 col-sm-12 col-sm-4 col-md-6 col-lg-4">
+          <div class="resume-wrapper">
+            <div class="resume-header">
+            
+              <div class="title-3">Saldo de mi cuenta individual
+              <a href="#" data-toggle="modal" data-target="#modal-default"
+              		{{if cuentaIndividual.monedaInversion == "pesos" }}
+              		data-modalcontent="cuentaIndividualInversionPesos"
+              		{{else}}
+              		data-modalcontent="cuentaIndividualInversionUSD"
+              		{{/if}}
+              	><i class="demo-icon icon-iconsapp_info icon-right"></i></a>
+            </div>
+            </div>
+            
+            <div class="resume-body">
+              <div class="col-main">
+                <div class="aumont">
+                  <span class="amount-main d-block">{{:~f(cuentaIndividual.saldoPesos,'pesos','$ ') }}</span>
+
+                  {{if cuentaIndividual.saldoEqUsd > 0}}
+                  <span class="mb-3">Equivalente a USD <span class="body-copy-bold">{{:~f(cuentaIndividual.saldoEqUsd,'usd')}}</span>
+                  {{/if}}
+                  
+                </span>
+                {{if cuentaIndividual.rescateMostrarTxt}}
+                <p class="label mt-2 mb-0 color-title">{{:txt.cuentaIndividualRescate}}</p>
+                {{/if}}
+              </div>
+            </div>
+          </div>
+          <div class="resume-footer ifDesktop">
+            <a data-toggle="tab" href="#panel-cuenta-individual"><i class="demo-icon icon-iconsapp_primary-arrow-right icon-left"></i>Ver detalle de cuenta</a>
+          </div>
+          <a href="#panel-cuenta-individual" data-toggle="tab" class="btn btn-link link-next big-link-next ifMobile"><i class="demo-icon icon-iconsapp_arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="divider-small divider-long ifMobile"></div>
+      {{/if}}
+      
+      
+      <div class="col-if-no-info-container resume-change-col-2 col-12 col-sm-12 col-sm-8 col-md-6 col-lg-8">
+        <div class="resume-wrapper">
+          <div class="resume-header">
+            <div class="title-3">Total acumulado de pagos</div>
+          </div>
+          <div class="resume-body">
+
+            <div class="col-main">
+
+              <div class="aumont">
+                <span class="amount d-block mb-0-mobile">{{:~f(pagos.acumulado,'pesos','$ ') }}</span>
+                
+                <span class="ifDesktop">
+                	<span class="label">Última prima paga {{:~f( pagos.ultimaPrimaFecha ,'d/m/a' ) }}: </span>
+                	<span class="body-copy-bold">{{:~f(pagos.ultimaPrimaPesos,'pesos','$ ') }}</span>
+                	{{if pagos.ultimaPrimaVrus}} ({{:~f(pagos.ultimaPrimaVrus,'dolar','VRU$S ') }}){{/if}}
+                	
+                </span>
+			  </div>
+              
+				{{if incrementoAutomatico && incrementoAutomatico != 0}}
+				<p class="label mt-2 mb-0 color-title">Prima con incremento automático del {{:incrementoAutomatico}}%</p>
+				{{/if}}
+
+				{{if pagoPrimasSuspendido}}
+				<p class="label mt-2 mb-0 color-title">Pago de primas suspendido hasta {{:~f( pagos.proximaPrimaFecha ,'d/m/a' ) }}</p>
+				{{/if}}
+              
+            </div>
+            
+          </div>
+          
+          <div class="resume-footer ifDesktop">
+            <a data-toggle="tab" href="#panel-pagos"><i class="demo-icon icon-iconsapp_primary-arrow-right icon-left"></i>Ver detalle de pagos</a>
+          </div>
+          <a href="#panel-pagos" data-toggle="tab" class="btn btn-link link-next ifMobile"><i class="demo-icon icon-iconsapp_arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <div class="divider-medium divider-long ifMobile"></div>
+      
+      <div class="col-12 ifMobile">
+        <div class="resume-wrapper position-relative">
+          <span class="">Última prima paga {{:~f( pagos.ultimaPrimaFecha ,'d/m/a' ) }}:</span>
+          <span><p class="no-margin"><span class="body-copy-bold">{{:~f(pagos.ultimaPrimaPesos,'pesos','$ ') }}</span> ({{:~f(pagos.ultimaPrimaVrus,'dolar','VRU$S ') }})</p></span>
+        </div>
+        
+        {{if cotizacionVrusMostrar}}
+        <div class="divider-small"></div>
+        <div class="resume-wrapper card-vrus position-relative">
+          <div class="button-modal btn-vrus">
+            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#modal-default" data-modalcontent="cotizacionVrus">
+              <i class="demo-icon icon-iconsapp_info"></i>
+            </button>
+          </div>
+          <p class="subtitle">Cotización VRU$S: <strong>{{:~f(cotizacionVrus,'vrus') }}</strong></p>
+          <p class="label">(valor referencia dolar)</p>
+        </div>
+        {{/if}}
+        
+      </div>
+      <div class="divider-medium divider-long ifMobile"></div>
+    </div>
+  </div>
+  
+  {{if graficosResumenMostrar}}
+  <div class="col-12 order-md-1">
+    <div class="view-options view-options-container">
+      <div class="tab-options">
+        <p class="label inline-break">Vista del gráfico:</p>
+        <ul class="nav nav-pills double-nav-pills mb-3 mb-md-0" id="myTab-graph-view" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active tab1" id="tab1" data-toggle="tab" href="#comparada" role="tab">Comparada</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link tab2" id="tab2" data-toggle="tab" href="#separada" role="tab">Separada</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+  
+</div>
+
+
+{{if graficosResumenMostrar}}
+<div class="row">
+  <div class="col-12 custom-section mb-large mb-0">
+    <div class="tab-content first-section-container" id="myTabContent">
+      <div class="tab-pane fade show active" id="comparada" role="tabpanel" aria-labelledby="tab1">
+        <div class="row">
+          <div class="col-12 col-lg-8 col-xl-8 col-if-no-info-container mb-4 mt-md-4 mb-md-0">
+            <div class="graph-wrapper">
+              <canvas
+              class="gfx-holder resumen-saldoypagos-line"
+              style="height:390px;width:100%"
+              ></canvas>
+            </div>
+          </div>
+          
+          
+          {{if cuentaIndividual.evolucionMostrarNota }}
+          <div class="col-lg-4 col-xl-3 offset-xl-1 info-container-wrapper mt-md-4 ifNotTablet">
+            <div class="info-container colapsible-icon">
+              <div class="title-3">{{:txt.evolProductoBoxH}}</div>
+              <div id="info-container-collapse" class="mb-4">
+                <div class="collapse collapse-container crop-text-read-more crop-text mb-3" id="evolucion">
+                  <p>{{:txt.evolProductoBoxP}}</p>
+                </div>
+                <button type="button" data-toggle="modal" class="show-more btn btn-link label pl-0 ifDesktop" data-target="#modal-default" data-modalcontent="evolucionSaldoDeMiCuenta">Leer mas <i class="demo-icon icon-iconsapp_arrow-down"></i></button>
+                <a class="collapse-link collapsed ifMobile mt-2 mb-3" data-toggle="collapse" href="#evolucion" role="button" aria-expanded="false" aria-controls="collapseExample" id="crop-text-read-more"><span>Leer mas</span><i class="demo-icon icon-iconsapp_arrow-down icon-right"></i><i class="demo-icon icon-iconsapp_arrow-up icon-right"></i></a>
+              </div>
+              <img src="img/graph-info.png" width="" height="" style="width:100%">
+            </div>
+          </div>
+          {{/if}}
+          
+          
+        </div>
+      </div>
+      <div class="tab-pane fade" id="separada" role="tabpanel" aria-labelledby="tab2">
+        <div class="row">
+          <div class="col-xl-6 col-xl-6 mb-4 mt-md-4 mb-md-0">
+            <p class="ifMobile">Saldo de mi cuenta individual</p>
+            <div class="graph-wrapper">
+
+              <canvas
+              class="gfx-holder resumen-saldo-line"
+              style="height:390px;width:100%"
+              ></canvas>
+            </div>
+          </div>
+          <div class="col-xl-6 col-xl-6 mb-4 mt-md-4 mb-md-0">
+            <p class="ifMobile">Total acumulado de pagos</p>
+            <div class="graph-wrapper">
+
+              <canvas
+              class="gfx-holder resumen-pagos-line"
+              style="height:390px;width:100%"
+              ></canvas>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ifTablet col-md-12 col-lg-8">
+    <p class="color-title">{{:txt.graficoNotaFinal}}</p>
+  </div>
+  
+  {{if cuentaIndividual.evolucionMostrarNota }}
+  <div class="col-lg-4 col-xl-3 offset-xl-1 info-container-wrapper mt-4 mb-5 ifTablet">
+    <div class="info-container colapsible-icon">
+      <div class="title-3">{{:txt.evolProductoBoxH}}</div>
+      <div id="info-container-collapse" class="mb-4">
+        <div class="collapse collapse-container crop-text-read-more crop-text mb-3" id="evolucion">
+          <p>{{:txt.evolProductoBoxP}}</p>
+        </div>
+        <button type="button" data-toggle="modal" class="show-more btn btn-link label pl-0 ifDesktop" data-target="#modal-default" data-modalcontent="evolucionSaldoDeMiCuenta">Leer mas <i class="demo-icon icon-iconsapp_arrow-down"></i></button>
+        <a class="collapse-link collapsed ifMobile mt-2 mb-3" data-toggle="collapse" href="#evolucion" role="button" aria-expanded="false" aria-controls="collapseExample" id="crop-text-read-more"><span>Leer mas</span><i class="demo-icon icon-iconsapp_arrow-down icon-right"></i><i class="demo-icon icon-iconsapp_arrow-up icon-right"></i></a>
+      </div>
+      <img src="img/graph-info.png" width="" height="" style="width:100%">
+    </div>
+  </div>
+  {{/if}}
+  
+  
+  <div class="ifDesktop col-md-12 col-lg-8 mb-5">
+    <p class="color-title">{{:txt.graficoNotaFinal}}</p>
+  </div>
+</div>
+{{else}}
+	<div class="ifNotMobile"><br><br><br></div>
+{{/if}}
+
+{{if graficosResumenMostrar}}
+<div class="divider-medium divider-long ifMobile"></div>
+{{/if}}
+
+
+<div class="row">
+  <div class="col-12 custom-section mb-large">
+    <div class="first-section-container has-links">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="title-3 mt-3 mt-md-0 mb-3">Composición de mi cuenta individual</div>
+          <p class="color-title">{{:txt.cuentaIndividualsubtitulo}}</p>
+          <div id="table-scroll" class="table-scroll resumen-table-scroll mb-3">
+            <div class="table-responsive">  
+              <div class="table-container">
+                <table class="table table-style-1 table-gradient-bg resumen-table">
+                  <thead class="thead-border">
+                    <tr>
+                      <th scope="col" class="fixed-side">Fondos</th>
+                      <th scope="col">Unidades</th>
+                      <th scope="col">Precio unidad</th>
+                      <th scope="col">Total</th>
+                      <th scope="col">Distribución</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {{for composicion}}
+                    <tr>
+                      <th scope="row" class="fixed-side"><span class="list-rounded-item" style="background-color: {{:~bgColor([#index])}}"></span>{{:nombre}}</th>
+                      <td>{{:~f(unidades,'123')}}</td>
+                      <td>{{:~f(precioUnidadUsd,'usd')}}</td>
+                      <td>{{:~f(totalUsd,'usd')}}</td>
+                      <td class="body-copy-bold">{{:~f(asignacionPorcentual,'123')}}%</td>
+                    </tr>
+                    {{/for}}
+                    <tr>
+                      <th scope="row" class="body-copy-bold">TOTAL</th>
+                      <td colspan="2" class="body-copy-bold">{{:~f(composicionTotal.unidades,'123.45')}}</td>
+                      <td class="body-copy-bold" colspan="2">
+	                    USD {{:~f(composicionTotal.totalUsd,'usd')}}
+                      	<br>
+                      	({{:~f(cuentaIndividual.saldoPesos,'pesos','$ ') }})
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <a class="custom-link d-block mt-3" data-toggle="tab" href="#panel-fondos"><i class="demo-icon icon-iconsapp_arrow-right icon-left"></i>Ver evolución de los fondos</a>
+        </div>
+        <div  class="col-md-3 offset-md-1 mt-3">
+          <div class="chart-wrapper">
+
+            <canvas
+            class="gfx-holder resumen-composicion-pie"
+            style="height:200px;width:200px;"
+            ></canvas>
+          </div>
+          <div class="chart-references">
+            <ul>
+              {{for composicion}}
+              <li><span class="list-rounded-item" style="background-color: {{:~bgColor([#index])}}"></span>{{:nombre}}</li>
+              {{/for}}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Condiciones -->
+<div class="container-fluid bg-condiciones">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 custom-section mb-medium colapsible-icon mt-4 mt-md-5">
+        <p class="color-title">{{:txt.monedaNota}}</p>
+        <div class="collapse-container collapse-crop-1 crop-text-1 collapse" id="info-ahorro-resumen" style="">
+          <p class="color-title">{{:txt.resumenNotaFinal}}</p>
+        </div>
+        <a class="collapse-link collapsed" data-toggle="collapse" href="#info-ahorro-resumen" id="crop-text-1"><span>Leer más</span><i class="demo-icon icon-iconsapp_arrow-down icon-right"></i><i class="demo-icon icon-iconsapp_arrow-up icon-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>

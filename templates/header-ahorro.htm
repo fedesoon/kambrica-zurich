@@ -1,0 +1,48 @@
+<div class="header-logo">
+	<div class="container nav-container">
+		<div class="logo">
+			<a href="">
+				<img src="img/logos/zurich-logo-big.png" class="logo-desktop" height="96px" width="156px" alt="logo">
+				<img src="img/logos/zurichlogomobile.png" class="logo-mobile" height="72px" width="300px" alt="logo">
+			</a>
+		</div>
+		<div class="user-nav-wrapper">
+			<ul class="list-inline">
+				<li class="list-inline-item ifDesktop">Póliza Seguro de Vida <span class="body-copy-bold">{{:producto}} {{:plan}} N° {{:numero}}</span><a href="" class="pl-3 ifNotTablet">Ver todas mis pólizas</a></li>
+				<li class="list-inline-item nav-item-user">
+					<a class="nav-item nav-link navbar-icon-user dropdown-toggle pr-5" href="#" id="dropdown-user-header" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="demo-icon icon-iconsapp_user icon-border icon-left"></i>
+						<span class="ifDesktop">{{:usuario.nombre}} {{:usuario.apellido}}</span>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right user-nav-menu" aria-labelledby="dropdown-user-header">
+						<a class="dropdown-item" data-toggle="tab" href="#panel-perfil">Mi perfil</a>
+						<a class="dropdown-item ifTablet" href="">Ver todas mis pólizas</a>
+						<a class="dropdown-item" href="">Cerrar sesión</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="container nav-container clearfix">
+	<div class="main-navigation nav-scroller" id="mainmenu-wrapper">
+		<div class="horizontal-menu-wrapper">
+			<div class="horizontal-menu-control horizontal-menu-control-back" style="display:none;"><i class="demo-icon icon-iconsapp_arrow-left"></i></div>
+			<div class="horizontal-menu-control horizontal-menu-control-next" style="display:none;"><i class="demo-icon icon-iconsapp_arrow-right"></i></div>
+			<ul class="horizontal-menu nav" id="main-nav-tabs">
+				<li id="item1"><a class="active" id="panel-resumen-tab" href="#panel-resumen" data-toggle="tab" class="active">Resumen</a></li>
+				
+				{{if cuentaIndividual.saldoPesos > 0}}
+				<li id="item2"><a id="panel-cuenta-individual-tab" href="#panel-cuenta-individual" data-toggle="tab">Cuenta individual</a></li>
+				{{/if}}
+				
+				
+				<li id="item3"><a id="panel-pagos-tab" href="#panel-pagos" data-toggle="tab">Pagos</a></li>
+				<li id="item4"><a id="panel-fondo-tab" href="#panel-fondos" data-toggle="tab">Fondos</a></li>
+				<li id="item5"><a id="panel-gestiones-tab" href="#panel-gestiones" data-toggle="tab">Gestiones</a></li>
+				<li id="item6"><a id="panel-informacion-fiscal-tab" href="#panel-informacion-fiscal" data-toggle="tab">Información fiscal</a></li>
+				<li id="item7"><a id="panel-detalle-de-poliza-tab" href="#panel-detalle-de-poliza" data-toggle="tab">Detalle de póliza</a></li>
+			</ul>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,383 @@
+<div class="container section-inversion-resumen">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="title-1 mt-3">{{:producto}} {{:plan}}
+        <span class="small">Póliza N° {{:numero}}</span></div>
+    </div>
+    
+    {{if cotizacionVrusMostrar}}
+    <div class="col-md-4">
+      <div class="card-default card-vrus float-md-right ifDesktop">
+        <div class="button-modal btn-vrus">
+          <button type="button" class="btn btn-link" data-toggle="modal" data-target="#modal-default" data-modalcontent="cotizacionVrus">
+            <i class="demo-icon icon-iconsapp_info"></i>
+          </button>
+        </div>
+        <p class="subtitle">Cotización VRU$S: <strong>{{:~f(cotizacionVrus,'vrus')}}</strong></p>
+        <p class="label">(valor referencia dolar)</p>
+      </div>
+    </div>
+    {{/if}}
+    
+  </div>
+  <div class="row mb-3">
+    <div class="col-12">
+      <div class="h-list-simple">
+        <ul class="list-inline">
+          <li class="list-inline-item">Fecha inicial: <span class="body-copy-bold">{{:~f(fechaInicial,'d/m/a') }}</span></li>
+          <li class="list-inline-item">Vigencia final: <span class="body-copy-bold">{{:fechaFinalizaString}}</span></li>
+          <li class="list-inline-item link"><a data-toggle="tab" href="#panel-detalle-de-poliza" class="custom-link"><i class="demo-icon icon-iconsapp_arrow-right icon-left"></i>Ver detalle de póliza</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 order-md-2 mb-5 mb-0-mobile">
+      <div class="row">
+        <div class="divider-medium divider-long ifMobile"></div>
+        {{if cuentaIndividual.saldoPesos > 0}}
+        <div class="col-12 col-md-6">
+          <div class="resume-wrapper">
+            <div class="resume-header">
+              <div class="title-3">Saldo de mi cuenta individual
+                <a href="#" data-toggle="modal" data-target="#modal-default" 
+              		{{if cuentaIndividual.monedaInversion == "pesos" }}
+              		data-modalcontent="cuentaIndividualInversionPesos"
+              		{{else}}
+              		data-modalcontent="cuentaIndividualInversionUSD"
+              		{{/if}}
+              	><i class="demo-icon icon-iconsapp_info icon-right"></i></a>
+              </div>
+            </div>
+            <div class="resume-body">
+              <div class="col-main">
+                <div class="aumont">
+                  <span class="amount-main d-block">{{:~f(cuentaIndividual.saldoPesos,'pesos','$ ') }}</span>
+                  {{if cuentaIndividual.saldoEqUsd > 0}}
+                    <span>Equivalente a USD <span class="body-copy-bold">{{:~f(cuentaIndividual.saldoEqUsd,'usd')}}</span>
+                  {{/if}}
+                </span>
+              </div>
+            </div>
+            {{if cuentaIndividual.rescateMostrarTxt}}
+            <p class="ifMobile label mt-2 mb-0 color-title">{{:txt.cuentaIndividualRescate}}</p>
+            {{/if}}
+            
+			{{if diasDesdeFechaInicial > 365}}
+            <div class="divider-small divider-long ifMobile mt-3"></div>
+            <div class="col-secondary">
+              <span>Variación de mi cuenta en los</span>
+              <span><p class="no-margin">Últimos {{:cuentaIndividual.variacionMesesTiempo}} meses<span class="variation positive"> {{:cuentaIndividual.variacionMesesDato}}</span></p></span>
+            </div>
+            {{/if}}
+            
+            {{if cuentaIndividual.rescateMostrarTxt}}
+            <p class="ifDesktop label mt-2 mb-0 color-title">{{:txt.cuentaIndividualRescate}}</p>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+      {{/if}}
+      <div class="divider-medium divider-long ifMobile"></div>
+      <div class="col-12 col-md-6">
+        <div class="resume-wrapper">
+          <div class="resume-header">
+            <div class="title-3">Total aportado</div>
+          </div>
+          <div class="resume-body">
+            <div class="col-main">
+              <div class="aumont">
+                <span class="amount d-block">$200.000</span>
+              </span>
+            </div>
+          </div>
+          <div class="resume-footer ifDesktop">
+             <a data-toggle="tab" href="#panel-aportes" class="ifDesktop"><i class="demo-icon icon-iconsapp_primary-arrow-right icon-left"></i>Ver aportes</a>
+          </div>
+        </div>
+        <a data-toggle="tab" href="#panel-aportes" class="btn btn-link link-next big-link-next ifMobile"><i class="demo-icon icon-iconsapp_arrow-right"></i></a>
+      </div>
+      {{if cotizacionVrusMostrar}}
+      <div class="divider-small ifMobile"></div>
+      <div class="resume-wrapper card-vrus position-relative ifMobile">
+        <div class="button-modal btn-vrus">
+          <button type="button" class="btn btn-link" data-toggle="modal" data-target="#modal-default" data-modalcontent="cotizacionVrus">
+            <i class="demo-icon icon-iconsapp_info"></i>
+          </button>
+        </div>
+        <p class="subtitle">Cotización VRU$S: <strong>{{:~f(cotizacionVrus,'usd')}}</strong></p>
+        <p class="label">(valor referencia dolar)</p>
+      </div>
+      {{/if}}
+    </div>
+    <div class="divider-medium divider-long ifMobile"></div>
+  </div>
+</div>
+</div>
+
+{{if graficosResumenMostrar}}
+<div class="row">
+  <div class="col-12">
+    <div class="view-options view-options-container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-7 col-xl-6 position-initial">
+          <div class="date-options-group buttonselectgroup-wrapper">
+
+            <div class="btn-group-options btn-group buttonselectgroup-buttons" role="group" aria-label="Selección rango de fechas">
+              <button type="button" class="active btn btn-secondary"  value="ultimos12">Últimos 12 meses</button>
+              <button type="button" class="btn btn-secondary" value="thisyear">Este año</button>
+              <button type="button" class="btn btn-secondary" value="desdeinicio">Desde el inicio</button>
+              <button type="button" class="btn btn-secondary" value="otrafecha" id="btn-otras-fechas">Otra fecha<i class="demo-icon icon-iconsapp_arrow-down icon-right"></i></button>
+            </div>
+
+            <div class="dropdown-options">
+              <div class="select-4-container select-inline select-4-icon">
+                <label class="label">Período a consultar</label>
+                <select class="select-4 custom-select select-4-reset border-select view-options-select buttonselectgroup-select" id="">
+                  <option selected="" value="ultimos12">Últimos 12 meses</option>
+                  <option value="thisyear">Este año</option>
+                  <option value="desdeinicio">Desde el inicio</option>
+                  <option value="otrafecha">Otra fecha</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="form-otras-fechas" class="buttonselectgroup-form" style="display:none">
+              <div class="card card-form-dates">
+                <div class="card-header">
+                  <button type="button" class="close close-form-dates" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="card-body">
+                  <div class="row pt-0 pt-md-3 line-input-text form-dates-input-error">
+                    <div class="col-12 col-sm-6 divider-right mb-4">
+                      <span class="body-copy-bold"><p>Desde:</p></span>
+                      <div class="row form-dates">
+                        <div class="col-4">
+                          <label>Día</label>
+                          <input type="text"
+                          class="form-control input-reset"
+                          id="cuenta-individual-custom-desde-d"
+                          placeholder="Ej: 01"
+                          value="{{: fechaInicial.split('-')[2] }}"
+                          >
+                          {{!-- class "form-dates-input-error" esta preparado para marcar campos invalidos  --}}
+                          
+                        </div>
+                        <div class="col-4">
+                          <label>Mes</label>
+                          <input type="text"
+                          class="form-control input-reset"
+                          id="cuenta-individual-custom-desde-m"
+                          placeholder="Ej: 01"
+                          value="{{: fechaInicial.split('-')[1] }}"
+                          >
+                        </div>
+                        <div class="col-4">
+                          <label>Año</label>
+                          <input type="text"
+                          class="form-control input-reset"
+                          id="cuenta-individual-custom-desde-y"
+                          placeholder="Ej: 2018"
+                          value="{{: fechaInicial.split('-')[0] }}"
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                      <span class="body-copy-bold"><p>Hasta:</p></span>
+                      <div class="row form-dates">
+                        <div class="col-4">
+                          <label>Día</label>
+                          <input type="text"
+                          class="form-control input-reset"
+                          id="cuenta-individual-custom-hasta-d"
+                          placeholder="Ej: 01"
+                          value="{{: fechaUltimaActualizacion.split('-')[2] }}"
+                          >
+                        </div>
+                        <div class="col-4">
+                          <label>Mes</label>
+                          <input type="text"
+                          class="form-control input-reset"
+                          id="cuenta-individual-custom-hasta-m"
+                          placeholder="Ej: 01"
+                          value="{{: fechaUltimaActualizacion.split('-')[1] }}"
+                          >
+                        </div>
+                        <div class="col-4">
+                          <label>Año</label>
+                          <input type="text"
+                          class="form-control input-reset"
+                          id="cuenta-individual-custom-hasta-y"
+                          placeholder="Ej: 2018"
+                          value="{{: fechaUltimaActualizacion.split('-')[0] }}"
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 label error-validation" id="cuenta-individual-custom-error-range" style="display:none">La información ingresada no es correcta</div>
+                  </div>
+                </div>
+                <div class="card-footer text-right">
+                  <div class="row">
+                    <div class="col-12">
+                      <button type="button" class="btn btn-primary" id="cuenta-individual-custom-submit" {{!-- disabled --}} >OK</button>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="col-12 col-md-6 col-lg-5 col-xl-6">
+          <div class="second-column float-md-right">
+            <div class="tab-options mobile-icon float-md-left column-left">
+              <p class="label no-margin">Ver cómo:</p>
+              <ul class="nav nav-pills" id="myTab2" role="tablist">
+                <li class="nav-item mini-tab">
+                  <a class="nav-link active" data-toggle="tab" href="#inversion-resumen-view1"><i class="demo-icon icon-iconsapp_graph icon-left"></i><span>Gráfico</span></a>
+                </li>
+                <li class="nav-item mini-tab">
+                  <a class="nav-link" data-toggle="tab" href="#inversion-resumen-view2"><i class="demo-icon icon-iconsapp_table icon-left"></i><span>Tabla</span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="float-md-left link-container column-right">
+             <a href="#descargar" data-savefile="Poliza Zurich #{{:numero}} - Evolucion Cuenta Individual al {{:fechaUltimaActualizacion}}.csv" data-saveobj="cuentaindividual" class="custom-link custom-link-inline "><i class="demo-icon icon-iconsapp_excel icon-left"></i>Descargar Excel</a>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+
+<div class="row">
+  <div class="col-12 custom-section mb-large">
+    <div class="tab-content first-section-container" id="myTabContent">
+      <div class="tab-pane fade show active" id="inversion-resumen-view1">
+        <div class="graph-wrapper">
+          
+
+          <canvas
+          class="gfx-holder cuentaindividual-line"
+          style="height:390px;width:100%;"
+          ></canvas>
+          
+        </div>
+          <div class="col-md-12 col-lg-8 mt-4">
+            <p class="color-title">{{:txt.graficoNotaFinal}}</p>
+          </div>
+      </div>
+      <div class="tab-pane fade" id="inversion-resumen-view2">
+        <div class="table-container">
+          <table class="table custom-flex-table ahorros-tab2" id="cuenta-individual-table">
+            <thead class="thead-border">
+              <tr class="d-flex">
+                <th class="col-6 col-md-2" scope="col">Fecha</th>
+                <th class="col-6 col-md-10" scope="col">Acumulado (pesos)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{for evolucionCuentaIndividual}}
+              <tr class="d-flex" data-fecha="{{: fecha }}">
+                <th class="col-6 col-md-2" scope="row">{{:~f(fecha,'d/m/a') }}</th>
+                <td class="col-6 col-md-10">${{:~f(acumuladoPesos,'123')}}</td>
+              </tr>
+              {{/for}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="divider-medium divider-long ifMobile my-3"></div>
+  </div>
+</div>
+{{/if}}
+
+
+<div class="row">
+  <div class="col-12 custom-section mb-large">
+    <div class="first-section-container has-links">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="title-3">Composición de mi cuenta individual</div>
+          <div id="table-scroll" class="table-scroll resumen-table-scroll mb-3">
+            <div class="table-responsive">  
+              <div class="table-container">
+                <table class="table table-style-1 table-gradient-bg resumen-table">
+                  <thead class="thead-border">
+                    <tr>
+                      <th scope="col" class="fixed-side">Fondos</th>
+                      <th scope="col">Unidades</th>
+                      <th scope="col">Precio unidad</th>
+                      <th scope="col">Total</th>
+                      <th scope="col">Distribución</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {{for composicion}}
+                    <tr>
+                      <th scope="row" class="fixed-side"><span class="list-rounded-item" style="background-color: {{:~bgColor([#index])}}"></span>{{:nombre}}</th>
+                      <td>{{:~f(unidades,'123.45')}}</td>
+                      <td>{{:~f(precioUnidadUsd,'usd')}}</td>
+                      <td>{{:~f(totalUsd,'usd')}}</td>
+                      <td class="body-copy-bold">{{:~f(asignacionPorcentual,'123.45')}}%</td>
+                    </tr>
+                    {{/for}}
+                    <tr>
+                      <th scope="row" class="body-copy-bold">TOTAL</th>
+                      <td colspan="2" class="body-copy-bold">{{:~f(composicionTotal.unidades,'123.45')}}</td>
+                      <td class="body-copy-bold" colspan="2">
+                      	{{:~f(composicionTotal.totalUsd,'usd','USD ')}}
+                      	<br>
+                      	({{:~f(cuentaIndividual.saldoPesos,'pesos','$ ') }})
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <a data-toggle="tab" href="#panel-fondos" class="custom-link d-block mt-3"><i class="demo-icon icon-iconsapp_arrow-right icon-left"></i>Ver evolución de los fondos</a>
+        </div>
+        <div  class="col-md-3 offset-md-1">
+          <div class="chart-wrapper">
+            
+            <canvas
+            class="gfx-holder resumen-composicion-pie"
+            style="height:200px;width:200px;"
+            ></canvas>
+          </div>
+          <div class="chart-references">
+            <ul>
+              {{for composicion}}
+              <li><span class="list-rounded-item" style="background-color: {{:~bgColor([#index])}}"></span>{{:nombre}}</li>
+              {{/for}}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Condiciones -->
+<div class="container-fluid bg-condiciones">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 custom-section mb-medium colapsible-icon mt-4 mt-md-5">
+        <p class="color-title">{{:txt.monedaNota}}</p>
+        <div class="collapse-container collapse-crop-1 crop-text-1 collapse" id="info-ahorro-resumen" style="">
+          <p class="color-title">{{:txt.cuentaIndividualNotaFinal}}</p>
+        </div>
+        <a class="collapse-link collapsed" data-toggle="collapse" href="#info-ahorro-resumen" id="crop-text-1"><span>Leer más</span><i class="demo-icon icon-iconsapp_arrow-down icon-right"></i><i class="demo-icon icon-iconsapp_arrow-up icon-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>

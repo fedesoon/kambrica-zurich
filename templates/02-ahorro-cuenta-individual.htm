@@ -1,0 +1,311 @@
+<div class="container section-ahorro-cuenta-individual">
+  <div class="row">
+    <div class="col-md-8">
+      <h1 class="title-1 mt-3">Saldo de mi cuenta individual</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="resume-wrapper">
+        <div class="resume-body">
+          <div class="col-main">
+            <div class="aumont">
+              <span class="amount-main d-block">{{:~f(cuentaIndividual.saldoPesos,'pesos','$ ') }}</span>
+              {{if cuentaIndividual.saldoEqUsd > 0}}
+              <span>Equivalente a USD <span class="body-copy-bold">{{:~f(cuentaIndividual.saldoEqUsd,'usd')}}</span>
+              <a href="#" data-toggle="modal" data-target="#modal-default"
+              		{{if cuentaIndividual.monedaInversion == "pesos" }}
+              		data-modalcontent="cuentaIndividualInversionPesos"
+              		{{else}}
+              		data-modalcontent="cuentaIndividualInversionUSD"
+              		{{/if}}
+              	><i class="demo-icon icon-iconsapp_info icon-right"></i></a>
+              {{/if}}
+            </span>
+            {{if cuentaIndividual.rescateMostrarTxt}}
+            <p class="label mt-2 mb-0 color-title">{{:txt.cuentaIndividualRescate}}</p>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+      
+     
+      <div class="resume-footer">
+      	 {{if diasDesdeFechaInicial > 365}}
+        <div class="title-3 mb-3 mb-md-5">Variación de mi cuenta en los <span class="d-block d-md-inline"><strong>últimos {{:cuentaIndividual.variacionMesesTiempo}} meses</strong> <span class="variation positive">{{:cuentaIndividual.variacionMesesDato}}</span></span></div>
+        {{else}}
+        	&nbsp;
+         {{/if}}
+      </div>
+     
+      
+      <div class="divider-medium divider-long ifMobile"></div>
+    </div>
+  </div>
+</div>
+
+
+{{if graficosResumenMostrar}}
+<div class="row">
+  <div class="col-12">
+    <div class="title-3 mb-3">Evolución de mi cuenta individual</div>
+    <div class="view-options view-options-container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-7 col-xl-6 position-initial">
+          <div class="date-options-group buttonselectgroup-wrapper">
+
+            <div class="btn-group-options btn-group buttonselectgroup-buttons" role="group" aria-label="Selección rango de fechas">
+              <button type="button" class="active btn btn-secondary"  value="ultimos12">Últimos 12 meses</button>
+              <button type="button" class="btn btn-secondary" value="thisyear">Este año</button>
+              <button type="button" class="btn btn-secondary" value="desdeinicio">Desde el inicio</button>
+              <button type="button" class="btn btn-secondary" value="otrafecha" id="btn-otras-fechas">Otra fecha<i class="demo-icon icon-iconsapp_arrow-down icon-right"></i></button>
+            </div>
+
+            <div class="dropdown-options">
+              <div class="select-4-container select-inline select-4-icon">
+                <label class="label">Período a consultar</label>
+                <select class="select-4 custom-select select-4-reset border-select view-options-select buttonselectgroup-select" id="">
+                  <option selected="" value="ultimos12">Últimos 12 meses</option>
+                  <option value="thisyear">Este año</option>
+                  <option value="desdeinicio">Desde el inicio</option>
+                  <option value="otrafecha">Otra fecha</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="form-otras-fechas" class="buttonselectgroup-form" style="display:none">
+              <div class="card card-form-dates">
+                <div class="card-header">
+                  <button type="button" class="close close-form-dates" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="card-body">
+                  <div class="row pt-0 pt-md-3 line-input-text form-dates-input-error">
+                    <div class="col-12 col-sm-6 divider-right mb-4">
+                      <span class="body-copy-bold"><p>Desde:</p></span>
+                      <div class="row form-dates">
+                        <div class="col-4">
+                          <label>Día</label>
+                          <input type="text"
+                          class="form-control input-reset"
+                          id="cuenta-individual-custom-desde-d"
+                          placeholder="Ej: 01"
+                          value="{{: fechaInicial.split('-')[2] }}"
+                          >
+                          {{!-- class "form-dates-input-error" esta preparado para marcar campos invalidos  --}}
+                        </div>
+                        <div class="col-4">
+                          <label>Mes</label>
+                          <input type="text"
+                          class="form-control input-reset"
+                          id="cuenta-individual-custom-desde-m"
+                          placeholder="Ej: 01"
+                          value="{{: fechaInicial.split('-')[1] }}"
+                          >
+                        </div>
+                        <div class="col-4">
+                          <label>Año</label>
+                          <input type="text"
+                          class="form-control input-reset"
+                          id="cuenta-individual-custom-desde-y"
+                          placeholder="Ej: 2018"
+                          value="{{: fechaInicial.split('-')[0] }}"
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                      <span class="body-copy-bold"><p>Hasta:</p></span>
+                      <div class="row form-dates">
+                        <div class="col-4">
+                          <label>Día</label>
+                          <input type="text"
+                          class="form-control input-reset"
+                          id="cuenta-individual-custom-hasta-d"
+                          placeholder="Ej: 01"
+                          value="{{: fechaUltimaActualizacion.split('-')[2] }}"
+                          >
+                        </div>
+                        <div class="col-4">
+                          <label>Mes</label>
+                          <input type="text"
+                          class="form-control input-reset"
+                          id="cuenta-individual-custom-hasta-m"
+                          placeholder="Ej: 01"
+                          value="{{: fechaUltimaActualizacion.split('-')[1] }}"
+                          >
+                        </div>
+                        <div class="col-4">
+                          <label>Año</label>
+                          <input type="text"
+                          class="form-control input-reset"
+                          id="cuenta-individual-custom-hasta-y"
+                          placeholder="Ej: 2018"
+                          value="{{: fechaUltimaActualizacion.split('-')[0] }}"
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 label error-validation" id="cuenta-individual-custom-error-range" style="display:none">La información ingresada no es correcta</div>
+                  </div>
+                </div>
+                <div class="card-footer text-right">
+                  <div class="row">
+                    <div class="col-12">
+                      <button type="button" class="btn btn-primary" id="cuenta-individual-custom-submit" {{!-- disabled --}} >OK</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-5 col-xl-6">
+          <div class="second-column float-md-right">
+            <div class="tab-options mobile-icon float-md-left column-left">
+              <p class="label no-margin">Ver cómo:</p>
+              <ul class="nav nav-pills" id="myTab2" role="tablist">
+                <li class="nav-item mini-tab">
+                  <a class="nav-link active" data-toggle="tab" href="#ahorro-cuenta-individual-view1"><i class="demo-icon icon-iconsapp_graph icon-left"></i><span>Gráfico</span></a>
+                </li>
+                <li class="nav-item mini-tab">
+                  <a class="nav-link" data-toggle="tab" href="#ahorro-cuenta-individual-view2"><i class="demo-icon icon-iconsapp_table icon-left"></i><span>Tabla</span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="float-md-left link-container column-right">
+              <a href="#descargar" data-savefile="Poliza Zurich #{{:numero}} - Evolucion Cuenta Individual al {{:fechaUltimaActualizacion}}.csv" data-saveobj="cuentaindividual" class="custom-link custom-link-inline "><i class="demo-icon icon-iconsapp_excel icon-left"></i>Descargar Excel</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 custom-section mb-large">
+    <div class="tab-content first-section-container has-links" id="myTabContent">
+      <div class="tab-pane fade show active" id="ahorro-cuenta-individual-view1">
+        <div class="graph-wrapper">
+          <canvas
+          class="gfx-holder cuentaindividual-line"
+          style="height:390px;width:100%;"></canvas>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-lg-8 mt-md-2">
+            <p class="color-title">{{:txt.graficoNotaFinal}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="ahorro-cuenta-individual-view2">
+        <div class="table-container">
+          <table class="table custom-flex-table ahorros-tab2" id="cuenta-individual-table">
+            <thead class="thead-border">
+              <tr class="d-flex">
+                <th class="col-6 col-md-2" scope="col">Fecha</th>
+                <th class="col-6 col-md-10" scope="col">Saldo en pesos</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{for evolucionCuentaIndividual}}
+              <tr class="d-flex" data-fecha="{{: fecha }}">
+                <th class="col-6 col-md-2" scope="row">{{:~f(fecha,'d/m/a') }}</th>
+                <td class="col-6 col-md-10">${{:~f(acumuladoPesos,'123')}}</td>
+              </tr>
+              {{/for}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="divider-medium divider-long ifMobile mt-4 mb-0"></div>
+  </div>
+</div>
+{{/if}}
+
+<div class="row">
+  <div class="col-12 custom-section mb-large">
+    <div class="first-section-container has-links">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="title-3">Composición de mi cuenta individual</div>
+          <p class="color-title">{{:txt.cuentaIndividualsubtitulo}}</p>
+          <div id="table-scroll" class="table-scroll cuenta-individual-table-scroll">
+            <div class="table-responsive">  
+              <div class="table-container">
+                <table class="table table-style-1 table-gradient-bg cuenta-individual-table">
+                  <thead class="thead-border">
+                    <tr>
+                      <th scope="col" class="fixed-side">Fondos</th>
+                      <th scope="col">Unidades</th>
+                      <th scope="col">Precio unidad</th>
+                      <th scope="col">Total</th>
+                      <th scope="col">Distribución</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {{for composicion}}
+                    <tr>
+                      <th scope="row" class="fixed-side"><span class="list-rounded-item" style="background-color: {{:~bgColor([#index])}}"></span>{{:nombre}}</th>
+                      <td>{{:~f(unidades,'123.45')}}</td>
+                      <td>{{:~f(precioUnidadUsd,'usd')}}</td>
+                      <td>{{:~f(totalUsd,'usd')}}</td>
+                      <td class="body-copy-bold">{{:~f(asignacionPorcentual,'123.45')}}%</td>
+                    </tr>
+                    {{/for}}
+                    <tr>
+                      <th scope="row" class="body-copy-bold">TOTAL</th>
+                      <td colspan="2" class="body-copy-bold">{{:~f(composicionTotal.unidades,'123.45')}}</td>
+                      <td class="body-copy-bold" colspan="2">
+                      	{{:~f(composicionTotal.totalUsd,'usd','USD ')}}
+                      	<br>
+                      	({{:~f(cuentaIndividual.saldoPesos,'pesos','$ ') }})
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <a data-toggle="tab" href="#panel-fondos" class="custom-link mt-3 d-block"><i class="demo-icon icon-iconsapp_arrow-right icon-left"></i>Ver evolución de los fondos</a>
+        </div>
+        <div  class="col-md-3 offset-md-1">
+          <div class="chart-wrapper">
+
+            <canvas
+            class="gfx-holder resumen-composicion-pie"
+            style="height:200px;width:200px;"
+            ></canvas>
+
+          </div>
+          <div class="chart-references">
+            <ul>
+              {{for composicion}}
+              <li><span class="list-rounded-item" style="background-color: {{:~bgColor([#index])}}"></span>{{:nombre}}</li>
+              {{/for}}
+            </ul>
+            <a class="custom-link d-block" data-toggle="modal" data-target="#modal-default" href="" data-modalcontent="distribucionFondos">Cómo cambiar la distribución de los fondos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Condiciones -->
+<div class="container-fluid bg-condiciones">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 custom-section mb-medium colapsible-icon mt-4 mt-md-5">
+        <p class="color-title">{{:txt.monedaNota}}</p>
+        <div class="collapse-container collapse-crop-1 crop-text-1 collapse" id="info-ahorro-cuenta-individual" style="">
+          <p class="color-title">{{:txt.cuentaIndividualNotaFinal}}</p>
+        </div>
+        <a class="collapse-link collapsed" data-toggle="collapse" href="#info-ahorro-cuenta-individual" id="crop-text-1"><span>Leer más</span><i class="demo-icon icon-iconsapp_arrow-down icon-right"></i><i class="demo-icon icon-iconsapp_arrow-up icon-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>

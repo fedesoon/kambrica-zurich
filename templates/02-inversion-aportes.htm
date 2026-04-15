@@ -1,0 +1,142 @@
+<div class="container section-inversion-aportes custom-section mb-medium">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="title-1 mt-3">Total de aportes</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="resume-wrapper mb-5 mb-0-mobile pt-0">
+        <div class="resume-body">
+          <div class="col-main">
+            <div class="aumont">
+              <span class="amount-main d-block">{{:~f(aportes.acumulado,'pesos','$ ') }}</span>
+              {{if cuentaIndividual.saldoEqUsd > 0}}
+              <span><span class="label">Equivalente a: </span><span class="body-copy-bold">USD {{:~f(aportes.acumuladoEqUsd,'usd')}}</span><a class="" href="#" data-container="body" data-toggle="popover" data-placement="top" data-content="{{:modal.aportesLegalesDolar.body}}"><i class="demo-icon icon-iconsapp_info icon-right"></i></a></span>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divider-medium divider-long ifMobile"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 custom-section mb-medium">
+      <div class="title-3 mb-3 pt-4 pt-md-0">Detalle de aportes</div>
+      <div class="collapse-wrapper">
+        <div class="colapsible-list-header table-movimientos table-movimientos-header">
+          <ul class="list-inline colapsible-list-body mb-0">
+            <li class="list-inline-item collapsable-item-1"><span class="body-copy-bold">Fecha</span></li>
+            <li class="list-inline-item collapsable-item-2"><span class="body-copy-bold">Monto en pesos</span></li>
+            <li class="list-inline-item collapsable-item-3 ifDesktop"><span class="body-copy-bold">Monto equivalente en dolares</span></li>
+            <li class="list-inline-item collapsable-item-4 ifDesktop"><span class="body-copy-bold">Cotización dólar</span></li>
+            <li class="list-inline-item collapsable-item-5 ifDesktop"><span class="body-copy-bold">Unidades</span></li>
+          </ul>
+        </div>
+        {{for aportes.aporteItem itemVar='~dato'}} 
+        <div class="collapse-item colapsible-list-header table-movimientos">
+          <ul class="list-inline colapsible-list-body mb-0">
+            <li class="list-inline-item collapsable-item-1">{{:~f(fecha,'d/m/a') }}</li>
+            <li class="list-inline-item collapsable-item-2">{{:~f(montoPesos,'pesos','$ ') }}</li>
+            <li class="list-inline-item collapsable-item-3 ifDesktop">USD {{:~f(montoEqDolares,'usd')}}</li>
+            <li class="list-inline-item collapsable-item-4 ifDesktop">{{:~f(cotizacionDolares,'123.45')}}</li>
+            <li class="list-inline-item collapsable-item-5 ifDesktop">{{:~f(unidades,'123')}}</li>
+            <li class="list-inline-item collapsable-item-6 text-right colapsible-icon"><a class="collapse-link collapsed" data-toggle="collapse" href="#movimientos-collapsible-{{:#index}}" role="button" aria-expanded="false" aria-controls="collapseExample"><span>Ver detalle</span><i class="demo-icon icon-iconsapp_arrow-down icon-right"></i><i class="demo-icon icon-iconsapp_arrow-up icon-right"></i></a></li>
+          </ul>
+          <div class="collapse collapse-container" id="movimientos-collapsible-{{:#index}}">
+            <ul class="list-2-columns ifMobile">
+              <li class="row">
+                <span class="col-8">Monto equivalente en dolares</span><span class="col-4 text-right">USD {{:~f(montoEqDolares,'usd')}}</span>
+              </li>
+              <li class="row">
+                <span class="col-8">Cotización dólar</span><span class="col-4 text-right">{{:~f(cotizacionDolares,'123.45')}}</span>
+              </li>
+              <li class="row">
+                <span class="col-8">Unidades</span><span class="col-4 text-right">{{:~f(unidades,'123')}}</span>
+              </li>
+            </ul>
+            <div class="row">
+              <div class="col-12">
+                <div class="detail-table-box pr-0 pr-md-4">
+                  <div id="table-scroll" class="table-scroll aportes-table-scroll-1 mb-3">
+                    <div class="table-responsive">
+                      <div class="table-container">
+                        <table class="table table-style-2 aportes-table-1 table-gradient-bg">
+                          <thead class="thead-border">
+                            <tr>
+                              <th scope="col" class="fixed-side">Fondos</th>
+                              <th scope="col">Unidades</th>
+                              <th scope="col">Precio unidad</th>
+                              <th scope="col">Moneda de inversión</th>
+                              <th scope="col">% de asignación al fondo</th>
+                              <th scope="col">Total</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {{for detalle}}
+                            <tr>
+                              <th scope="row" class="fixed-side">{{:fondo}}</th>
+                              <td>{{:~f(unidades,'123.45')}}</td>
+                              <td>{{:~f(precioUnidad,'123.45')}}</td>
+                              <td>{{:monedaInversion}}</td>
+                              <td>{{:porcientoAsignacion}} %</td>
+                              <td>{{:~f(unidades,'123.45')}}</td>
+                            </tr>
+                            {{/for}}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="color-title mb-0">{{:~root.txt.aportesTablaNotaFinal}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{/for}}
+        <div class="collapse-item colapsible-list-header table-movimientos no-border">
+          <ul class="list-inline colapsible-list-body mb-0">
+            <li class="list-inline-item collapsable-item-1 body-copy-bold">TOTAL</li>
+            <li class="list-inline-item collapsable-item-2 body-copy-bold">{{:~f(aportes.acumulado,'pesos','$ ') }}</li>
+            <li class="list-inline-item collapsable-item-3 ifDesktop body-copy-bold">{{:~f(aportes.acumuladoEqUsd,'usd', 'USD ')}}</li>
+          </ul>
+          <div class="collapse collapse-container" id="movimientos-collapsible-{{:#index}}">
+            <ul class="list-2-columns ifMobile">
+              <li class="row">
+                <span class="col-8">Monto equivalente en dolares</span><span class="col-4 text-right">USD {{:~f(aportes.acumuladoEqUsd,'usd')}}</span>
+              </li>
+              <li class="row">
+                <span class="col-8">Cotización dólar</span><span class="col-4 text-right">{{:~f(cotizacionDolares,'123.45')}}</span>
+              </li>
+              <li class="row">
+                <span class="col-8">Unidades</span><span class="col-4 text-right">{{:~f(unidades,'123')}}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 mb-4">
+      <div class="mb-4">
+      <a href="#" data-toggle="modal" data-target="#modal-default" data-modalcontent="comoHacerUnNuevoAporte">Cómo hacer un nuevo aporte</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Condiciones -->
+<div class="container-fluid bg-condiciones">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 custom-section mb-medium colapsible-icon mt-4 mt-md-5">
+        <div class="collapse-container collapse-crop-1 crop-text-1 collapse" id="info-ahorro-cuenta-individual" style="">
+          <p class="color-title">{{:txt.aportesNotaFinal}}</p>
+        </div>
+        <a class="collapse-link collapsed" data-toggle="collapse" href="#info-ahorro-cuenta-individual" id="crop-text-1"><span>Leer más</span><i class="demo-icon icon-iconsapp_arrow-down icon-right"></i><i class="demo-icon icon-iconsapp_arrow-up icon-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>

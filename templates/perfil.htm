@@ -1,0 +1,40 @@
+
+<div class="container perfil-container">
+	<a href="" class="back-link"><i class="demo-icon icon-iconsapp_arrow-left icon-left"></i>Volver</a>
+	<div class="custom-section mb-large">
+		<h1 class="title-1">Mi perfil</h1>
+		<div class="info-group">
+			<div>Email:</div>
+			<p class="body-copy-bold">{{:usuario.email}}</p>
+			<div>
+				<a href="" data-toggle="modal" data-target="#modal-editar-email">Editar email</a>
+			</div>
+		</div>
+		<div class="info-group">
+			<div>Nombre de usuario:</div>
+			<p class="body-copy-bold">{{:usuario.nombreUsuario}}</p>
+		</div>
+
+		<div class="info-group">
+			<div class="mb-3">Documento</div>
+			<div class="d-inline-block">
+				<div>Tipo:</div>
+				<p class="body-copy-bold mb-0">{{:usuario.documentoTipo}}</p>
+			</div>
+			<div class="d-inline-block ml-5">
+				<div>Número:</div>
+				<p class="body-copy-bold mb-0">{{:usuario.documentoNumero}}</p>
+			</div>
+		</div>
+		<div class="info-group">
+			<div>Clave:</div>
+			<p class="body-copy-bold">******</p>
+		</div>
+		<div class="info-group">
+			<ul class="list-inline double-item-left">
+				<li class="list-inline-item"><a href="" class="py-0" data-toggle="modal" data-target="#modal-cambiar-clave">Cambiar clave</a></li>
+				<li class="list-inline-item"><a href="" class="py-0" data-toggle="modal" data-target="#modal-cambiaste-clave">¿Cambiaste tu clave?</a></li>
+			</ul>
+		</div>
+	</div>
+</div>

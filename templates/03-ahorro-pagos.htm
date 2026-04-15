@@ -1,0 +1,91 @@
+<div class="container section-ahorro-pagos">
+  <div class="row">
+    <div class="col-md-8">
+      <h1 class="title-1 mt-3">Total acumulado de pagos</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="resume-wrapper mb-5 mb-0-mobile">
+        <div class="resume-body">
+          <div class="col-main">
+            <div class="aumont">
+              <span class="amount-main d-block">{{:~f(pagos.acumulado,'pesos','$ ')}}</span>
+              <span><span class="label">Última prima paga {{:~f( pagos.ultimaPrimaFecha ,'d/m/a' ) }}: </span><span class="body-copy-bold">{{:~f(pagos.ultimaPrimaPesos,'pesos','$ ')}} </span>{{if pagos.ultimaPrimaVrus}} ({{:~f(~root.pagos.pagosIndividuales.pesos[~len-#index],'pesos','$ ')}}){{/if}}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="divider-medium divider-long ifMobile"></div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <div class="title-3">Historial de primas pagas</div>
+  </div>
+  <div class="col-5 col-md-4 col-lg-3 col-xl-2 mb-3">
+    <div class="datepicker-input-group line-input-text">
+      <label class="label">Ver desde:</label>
+      <input type="text" class="form-control datapicker-icon input-content" data-toggle="datepicker-pagos-desde">
+      <i class="demo-icon icon-iconsapp_arrow-down icon-right"></i>
+
+      <div id="datepicker-pagos-desde">
+
+      </div>
+    </div>
+  </div>
+  <div class="col-5 col-md-4 col-lg-3 col-xl-2 mb-3">
+    <div class="datepicker-input-group line-input-text">
+      <label class="label">Hasta:</label>
+      <input type="text" class="form-control datapicker-icon input-content" data-toggle="datepicker-hasta">
+      <i class="demo-icon icon-iconsapp_arrow-down icon-right"></i>
+    </div>
+  </div>
+  <div class="col-12 col-md-6 custom-padding-2 mb-3 align-self-center">
+    <a href="#descargar" data-savefile="Poliza Zurich #{{:numero}} - Historial primas pagas al {{:fechaUltimaActualizacion}}.csv" data-saveobj="historialpagos" class="custom-link custom-link-inline "><i class="demo-icon icon-iconsapp_excel icon-left"></i>Descargar Excel</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-lg-8 col-xl-6 custom-section mb-large">
+    <div class="table-container">
+      <table class="table custom-flex-table tabla-pagosindividuales">
+        <thead class="thead-border">
+          <tr class="d-flex">
+            <th class="col-8 col-md-6" scope="col">Fecha de acreditación del pago</th>
+            <th class="col-4 col-md-6" scope="col">Monto</th>
+          </tr>
+        </thead>
+        <tbody>
+         {{for pagos.pagosIndividuales.fechas reverse=true ~len=pagos.pagosIndividuales.fechas.length-1}}
+         <tr class="d-flex" data-fecha="{{: #data }}">
+          <th class="col-8 col-md-6" scope="row">{{:~f(#data,'d/m/a' ) }} </th>
+          <td class="col-4 col-md-6">{{:~f(~root.pagos.pagosIndividuales.pesos[~len-#index],'pesos','$ ')}}</td>
+        </tr>
+        {{/for}}
+      </tbody>
+
+      <tfoot>
+        <tr class="d-flex skip-from-csv" >
+          <th class="col-8 col-md-6 body-copy-bold" scope="row">TOTAL</th>
+          <td class="col-4 col-md-6 body-copy-bold" id="pagos-individuales-sumpesos">---</td>
+        </tr>
+      </tfoot>
+
+    </table>
+  </div>
+</div>
+</div>
+</div>
+
+
+<!-- Condiciones -->
+<div class="container-fluid bg-condiciones">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 custom-section mb-medium colapsible-icon mt-4 mt-md-5">
+        <p class="color-title">{{:txt.monedaPesosNota}}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,239 @@
+	<div class="container section-ahorro-detalle-de-poliza">
+	<div class="row">
+		<div class="col-12">
+			<div class="title-1 mt-3">Detalle de póliza</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 col-md-12 col-lg-7 custom-section mb-large mb-0-mobile">
+			<div class="detail-info">
+				<div class="detail-header clearfix">
+					<div class="title-3 float-md-left">
+						{{if (producto || plan) }}
+						<span class="body-copy-bold">{{:producto}} {{:plan}}</span> /
+						{{/if}}
+						Póliza N° {{:numero}}</div>
+				</div>
+				<div class="detail-body">
+					<ul class="row">
+						<li class="col-6 col-sm-3 pb-4"><p class="label mb-0">Fecha inicial:</p><span class="body-copy-bold"> {{:~f(fechaInicial,'d/m/a') }}</span></li>
+						<li class="col-6 col-sm-3 pb-4"><p class="label mb-0">Vigencia final:</p><span class="body-copy-bold"> {{:fechaFinalizaString}}</span></li>
+						{{if (plazo)}}<li class="col-6 col-sm-3 pb-4"><p class="label mb-0">Plazo de pago de primas:</p><span class="body-copy-bold"> {{:plazo}}</span></li>{{/if}}
+						<li class="col-6 col-sm-3 pb-4"><p class="label mb-0">Estado:</p><span class="body-copy-bold"> {{:estado}}</span></li>
+						
+						{{if plan}}
+						<li class="col-6 col-sm-3 pb-8"><p class="label mb-0">Plan</p><span class="body-copy-bold"> {{:plan}}</span></li>
+						{{/if}}
+						
+						<li class="col-6 col-sm-3 pb-4"><p class="label mb-0">Agencia:</p><span class="body-copy-bold"> {{:agencia}}</span></li>
+						<li class="col-6 col-sm-3 pb-4"><p class="label mb-0">Productor:</p><span class="body-copy-bold"> {{:productor}}</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="simple-collapse-mobile">
+				<div class="collapse-item">
+					<a class="collapsed ifTablet" data-toggle="collapse" href="#collapseItem-01" role="button" aria-expanded="false" aria-controls="collapseExample">
+						<i class="demo-icon opener icon-iconsapp_primary-arrow-down icon-left"></i><span>Datos personales</span>
+					</a>
+					<div class="collapse" id="collapseItem-01" style="">
+						<div class="detail-body pb-5 ifTablet">
+							{{for usuario}}
+							<ul class="row mb-4">
+								<li class="col-12"><span class="title-4">{{:nombre}} {{:apellido}}</span></li>
+								<li class="col-12 pb-4"><span class="title-4">{{:documentoTipo}} {{:documentoNumero}}</span></li>
+								<li class="col-12 pb-4"><p class="label mb-0">Email:</p><span class="body-copy-bold">{{:email}}</span><a href="" class="float-md-right d-block pb-0" data-toggle="modal" data-target="#modal-editar-email">Editar email</a></li>
+								<li class="col-12 pb-4"><p class="label mb-0">Domicilio particular:</p><span class="body-copy-bold">{{:particularDomicilio}}</span></li>
+								<li class="col-12 pb-4"><p class="label mb-0">Código postal:</p><span class="body-copy-bold">{{:particualrCP}}</span></li>
+								<li class="col-12"><p class="label mb-0">Teléfono:</p><span class="body-copy-bold">{{:particularTel}}</span></li>
+							</ul>
+							<div class="divider-small"></div>
+							<ul class="row mt-4 mb-5 mb-md-3">
+								<li class="col-12 pb-4"><p class="label mb-0">Domicilio correspondencia:</p><span class="body-copy-bold">{{:correspondienciaDomicilio}}</span></li>
+								<li class="col-12 pb-4"><p class="label mb-0">Código postal:</p><span class="body-copy-bold">{{:correspondienciaCP}}</span></li>
+								<li class="col-12"><p class="label mb-0">Teléfono:</p><span class="body-copy-bold">{{:correspondienciaTel}}</span></li>
+							</ul>
+							{{/for}}
+							<a href="" data-toggle="modal" data-target="#modal-default" data-modalcontent="cambiarDatosPersonales">Cómo modificar mis datos</a>
+						</div>
+					</div>
+				</div>
+				<div class="collapse-item">
+					<a class="collapsed ifTablet" data-toggle="collapse" href="#collapseItem-02" role="button" aria-expanded="false" aria-controls="collapseExample">
+						<i class="demo-icon opener icon-iconsapp_primary-arrow-down icon-left"></i><span>Asegurado, beneficios y beneficiarios</span>
+					</a>
+					<div class="collapse dont-collapse-md colapsible-icon" id="collapseItem-02" style="">
+						<div class="detail-info mb-3 mb-md-5">
+							<div class="detail-header clearfix ifNotTablet">
+								<div class="title-3 float-md-left">Asegurado, beneficios y beneficiarios</div>
+								
+								<button class="btn btn btn-link float-md-right ifNotTablet" data-toggle="modal" data-target="#modal-default" data-modalcontent="cambiarBeneficios">Cómo cambiar beneficiarios</button>
+							</div>
+							
+							<div class="detail-body">
+								{{for asegurados}}
+								<div class="row mb-3 mb-md-0">
+									<ul>
+										<li class="col-12 my-3 my-md-0">
+											<ul class="row">
+												<li class="col-12 pb-4"><p class="label mb-0">Asegurado:</p><span class="body-copy-bold">{{:nombre}}</span></li>
+											</ul>
+										</li>
+										<li class="col-12 pb-4 my-3 my-md-0"><p class="label mb-1">Suma asegurada por fallecimiento (Suma Básica más Adicional):</p><span class="title-4 body-copy-bold">{{:~f(aseguradoSuma, aseguradoSumaMoneda, 'format')}}</span>
+										{{if aseguradoSumaMoneda=='vrus'}}
+											<a href="#" data-toggle="modal" data-target="#modal-default" data-modalcontent="cotizacionVrus"><i class="demo-icon icon-iconsapp_info icon-right"></i></a>
+											{{/if}}
+										</li>
+										{{for beneficiarios}}
+										<li class="col-12 mt-4 mt-md-0">
+											<ul class="row">
+												<li class="col-6 col-sm-3 pb-4"><p class="label mb-0">Beneficiario:</p><span class="body-copy-bold">{{:nombre}}</span></li>
+												<li class="col-6 col-sm-3 pb-4"><p class="label mb-0">Vínculo:</p><span class="body-copy-bold">{{:rol}}</span></li>
+												<li class="col-6 col-sm-3 pb-4"><p class="label mb-0">Fecha de inicio de vigencia:</p><span class="body-copy-bold">{{:~f(vigencia,'d/m/a') }}</span></li>
+												<li class="col-6 col-sm-3 pb-4"><p class="label mb-0">Porcentaje:</p><span class="body-copy-bold">{{:porcentaje}} %</span></li>
+											</ul>
+										</li>
+										{{/for}}
+									</ul>
+								</div>
+								<div>
+									<ul class="list-inline double-item-left">
+										<li class="list-inline-item">
+											<a class="collapse-link collapsed mb-md-3" data-toggle="collapse" href="#detalle-collapsible-{{:#index}}" role="button" aria-expanded="false" aria-controls="collapseExample"><span>Ver detalle de beneficios</span><i class="demo-icon icon-iconsapp_arrow-down icon-right"></i><i class="demo-icon icon-iconsapp_arrow-up icon-right"></i></a>
+										</li>
+										<li class="list-inline-item ifNotTablet"><a href="" data-toggle="modal" data-target="#modal-default" data-modalcontent="queHacerSiniestro">Qué hacer en caso de siniestro</a></li>
+									</ul>
+								</div>
+								<div class="collapse collapse-container mb-3" id="detalle-collapsible-{{:#index}}" style="width: 100%">
+									<div class="detail-table-box">
+										<div class="table-container">
+											<table class="table table-gradient-bg">
+												<thead class="thead-border">
+													<tr class="">
+														<th scope="col">Beneficios incluidos</th>
+														<th scope="col">Monto {{!-- ({{:aseguradoSumaMoneda}}) --}}</th>
+														{{if ~root.beneficiosValorVrusMostrar}}<th scope="col">Monto (VRU$S)</th>{{/if}}
+													</tr>
+												</thead>
+												<tbody>
+													{{for beneficiosIncluidos}}
+													<tr>
+														<th scope="row">{{:beneficio}}</th>
+														<td>{{:~f(monto, #parent.parent.data.aseguradoSumaMoneda ,'format') }}</td>
+														{{if ~root.beneficiosValorVrusMostrar}}<td>{{:~f(valorVrus,'vrus','VRU$S ') }}</td>{{/if}}
+													</tr>
+													{{/for}}
+												</tbody>
+											</table>
+										</div>
+										<div class="table-container">
+											<table class="table mb-0">
+												<thead class="thead-border">
+													<tr class="">
+														<th scope="col" colspan="2">Beneficios NO incluidos</th>
+													</tr>
+												</thead>
+												<tbody>
+													{{for beneficiosNoIncluidos}}
+													<tr>
+														<th scope="row">{{:beneficio}}</th>
+														<td align="right"><a href="" class="" data-toggle="modal" data-target="#modal-default" data-modalcontent="agregarAPoliza">Cómo agregar a mi póliza</a></td>
+													</tr>
+													{{/for}}
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								{{/for}}
+								<div class="divider-small ifTablet my-3 my-md-0"></div>
+								<div class="row">
+									<button class="btn btn btn-link ifTablet" data-toggle="modal" data-target="#modal-default" data-modalcontent="queHacerSiniestro">Qué hacer en caso de siniestro</button>
+								</div>
+								<div class="row">
+									<button class="btn btn btn-link ifTablet" data-toggle="modal" data-target="#modal-default" data-modalcontent="cambiarBeneficios">Cómo cambiar beneficiarios</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="collapse-item no-border-bottom">
+					<a class="collapsed ifTablet" data-toggle="collapse" href="#collapseItem-03" role="button" aria-expanded="false" aria-controls="collapseExample">
+						<i class="demo-icon opener icon-iconsapp_primary-arrow-down icon-left"></i><span>Método de pago</span>
+					</a>
+					<div class="collapse dont-collapse-md" id="collapseItem-03" style="">
+						<div class="detail-info">
+							<div class="detail-header clearfix ifNotTablet">
+								<div class="title-3 float-md-left">Método de pago</div>
+								<button class="btn btn btn-link float-md-right ifNotTablet" data-toggle="modal" data-target="#modal-default" data-modalcontent="cambiarMetodoDePago">Cómo cambiar método de pago</button>
+							</div>
+							<div class="detail-body">
+								<ul class="row">
+									{{if metodoDePago.metodo}}
+										<li class="col-6 col-sm-3 pb-4"><p class="label mb-0">Método de pago:</p><span class="body-copy-bold">{{:metodoDePago.metodo}}</span></li>
+									{{/if}}
+									{{if metodoDePago.marcaTarjeta}}
+										<li class="col-6 col-sm-3 pb-4"><p class="label mb-0">Marca Tarjeta / Banco:</p><span class="body-copy-bold">{{:metodoDePago.marcaTarjeta}}{{if metodoDePago.marcaTarjeta && metodoDePago.marcaBanco}}, {{/if}}{{:metodoDePago.marcaBanco}}</span></li>
+									{{/if}}
+									{{if metodoDePago.nroTarjetaString}}<li class="col-6 col-sm-3 pb-4"><p class="label mb-0">N° de Tarjeta / CBU:</p><span class="body-copy-bold">{{:metodoDePago.nroTarjetaString}}</span></li>
+									{{/if}}
+									<li class="col-6 col-sm-3 pb-4"><p class="label mb-0">Frecuencia:</p><span class="body-copy-bold">{{:metodoDePago.frecuencia}}</span></li>
+								</ul>
+								<div class="row ifTablet">
+									<button class="btn btn btn-link" data-toggle="modal" data-target="#modal-default" data-modalcontent="cambiarMetodoDePago">Cómo cambiar método de pago</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="divider-medium divider-long ifMobile"></div>
+		<div class="col-12 col-md-12 offset-lg-1 col-lg-4">
+			<div class="detail-side-box ifNotTablet">
+				<div class="title-3 mb-3">Datos personales</div>
+				{{for usuario}}
+				<ul>
+					<li><span class="title-4">{{:nombre}} {{:apellido}}</span></li>
+					<li><span class="title-4">{{:documentoTipo}} {{:documentoNumero}}</span></li>
+				</ul>
+				<ul class="row">
+					<li class="col-12 pb-4"><p class="label mb-0">Email:</p><span class="body-copy-bold">{{:email}}</span><a href="" class="float-md-right" data-toggle="modal" data-target="#modal-editar-email">Editar email</a></li>
+					<li class="col-12 pb-4"><p class="label mb-0">Domicilio particular:</p><span class="body-copy-bold">{{:particularDomicilio}}</span></li>
+					<li class="col-12 pb-4"><p class="label mb-0">Código postal:</p><span class="body-copy-bold">1{{:particualrCP}}</span></li>
+					<li class="col-12"><p class="label mb-0">Teléfono:</p><span class="body-copy-bold">{{:particularTel}}</span></li>
+				</ul>
+				<div class="divider-small"></div>
+				<ul class="row mt-4">
+					<li class="col-12 pb-4"><p class="label mb-0">Domicilio correspondencia:</p><span class="body-copy-bold">{{:correspondienciaDomicilio}}</span></li>
+					<li class="col-12 pb-4"><p class="label mb-0">Código postal:</p><span class="body-copy-bold">{{:correspondienciaCP}}</span></li>
+					<li class="col-12"><p class="label mb-0">Teléfono:</p><span class="body-copy-bold">{{:correspondienciaTel}}</span></li>
+				</ul>
+				{{/for}}
+				<a href="" data-toggle="modal" data-target="#modal-default" data-modalcontent="cambiarDatosPersonales">Cómo modificar mis datos</a>
+			</div>
+			<div class="container-mt-32">
+				<div class="detail-header clearfix">
+					<div class="title-3">Documentación para descargar</div>
+				</div>
+				<div class="detail-body vertical-list">
+					<ul>
+						{{for documentacionLinks}}
+						<li><a href="{{:documentoLink}}"><i class="demo-icon icon-iconsapp_download icon-left"></i>{{:documentoTitulo}}</a></li>
+						{{/for}}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Condiciones -->
+<div class="container-fluid bg-condiciones">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 custom-section mb-medium colapsible-icon mt-4 mt-md-5">
+				<p class="color-title mb-0">{{:txt.detalleDePolizaNotaFinal}}</p>
+			</div>
+		</div>
+	</div>
+</div>
