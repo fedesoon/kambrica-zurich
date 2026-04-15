@@ -1,0 +1,10 @@
+{
+  "rewrites": [
+    { "source": "/json/cambiaremail.php", "destination": "/api/cambiaremail" },
+    { "source": "/json/cambiarclave.php", "destination": "/api/cambiarclave" },
+    { "source": "/index-ahorro.php", "destination": "/index-ahorro.html" },
+    { "source": "/index-inversion.php", "destination": "/index-inversion.html" },
+    { "source": "/index-proteccion.php", "destination": "/index-proteccion.html" },
+    { "source": "/index-error.php", "destination": "/index-error.html" }
+  ]
+}

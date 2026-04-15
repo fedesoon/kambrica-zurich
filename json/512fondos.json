@@ -1,0 +1,717 @@
+{
+	"receipts":[
+		"fondos"
+		],
+
+	"fondos": {
+		"rendimientoPlazo": 12,
+		"fechaPrecio": "2019-06-01",
+		"maxValue": 60, 		
+		"misFondos": [
+			{
+			"nombre": "Performance dolar II",
+			"urlComposicion": "files/download.php?file=Composicion Fondo - Performance dolar II",
+			"precioUnidadUsd": 2.7196688981353,
+			"rendimientoAnual": 0.7566861578993,
+			"evolucionPrecioUnidad": [ 
+				
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+21,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+22.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+23.4,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+24.6,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+24.8,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+26,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+27.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+28.4,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+29.6,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+30.8,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+33,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+34.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+34.4,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+35.6,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+37.8,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+39,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+39.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+41.4,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+41.6,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+42.8,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+44,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+46.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+47.4,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+48.6,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+48.8,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+51,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+51.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 25
+53.4 ],
+			"evolucionRendimiento":[
+				{
+					"anio": "2018",
+					"rendimiento": 0.61830174951735,
+					"evolucionPrecioUnidad": [ 5.33, 5.33, 5.18, 5.18, 5.18, 6.32, 5.33, 8.58, 5.33, 5.31, 5.30, 5.29 ]
+				},
+				{
+					"anio": "2017",
+					"rendimiento": 2.4425314480637,
+					"evolucionPrecioUnidad": [ 6.33, 6.33, 6.18, 6.18, 6.18, 6.32, 5.33, 8.58, 5.33, 5.31, 5.30, 5.29 ]
+				},
+				{
+					"anio": "2016",
+					"rendimiento": 1.5761638598406,
+					"evolucionPrecioUnidad": [ 7.33, 7.33, 5.18, 7.18, 7.18, 6.32, 7.33, 8.58, 7.33, 5.31, 5.30, 5.29 ]
+				}
+				]	
+			},
+			{
+			"nombre": "Income dolar II",
+			"urlComposicion": "files/download.php?file=Composicion Fondo - Income dolar II",
+			"precioUnidadUsd": 0.16077267292923,
+			"rendimientoAnual": 2.897644400549,
+			"evolucionPrecioUnidad": [ 
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+15,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+17.1,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+18.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+19.3,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+20.4,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+21.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+22.6,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+22.7,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+24.8,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+25.9,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+26,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+28.1,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+28.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+30.3,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+31.4,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+32.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+32.6,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+34.7,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+34.8,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+35.9,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+37,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+39.1,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+40.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+41.3,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+41.4,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+43.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+43.6,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+
+Deprecated: Implicit conversion from float 1.2 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 54
+44.7 ],
+			"evolucionRendimiento":[
+				{
+					"anio": "2015",
+					"rendimiento": 2.2384275851019,
+					"evolucionPrecioUnidad": [ 5.33, 5.33, 5.18, 5.18, 5.18, 6.32, 5.33, 8.58, 5.33, 5.31, 5.30, 5.29 ]
+				},
+				{
+					"anio": "2015",
+					"rendimiento": 1.3518746208175,
+					"evolucionPrecioUnidad": [ 6.33, 6.33, 6.18, 6.18, 6.18, 6.32, 5.33, 8.58, 5.33, 5.31, 5.30, 5.29 ]
+				},
+				{
+					"anio": "2015",
+					"rendimiento": 0.68795072831584,
+					"evolucionPrecioUnidad": [ 7.33, 7.33, 5.18, 7.18, 7.18, 6.32, 7.33, 8.58, 7.33, 5.31, 5.30, 5.29 ]
+				}
+				]	
+			},
+			{
+			"nombre": "Secure dolar",
+			"urlComposicion": "files/download.php?file=Composicion Fondo - Secure dolar",
+			"precioUnidadUsd": 5.9251317903051,
+			"rendimientoAnual": 1.4353507014156,
+			"evolucionPrecioUnidad": [ 
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+16,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+16.7,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+16.4,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+17.1,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+17.8,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+18.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+19.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+20.9,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+21.6,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+21.3,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+22,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+22.7,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+24.4,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+24.1,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+25.8,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+25.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+27.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+26.9,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+28.6,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+29.3,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+30,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+30.7,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+30.4,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+32.1,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+31.8,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+33.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+33.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 83
+34.9 ],
+			"evolucionRendimiento":[
+				{
+					"anio": "2015",
+					"rendimiento": 0.74576263956063,
+					"evolucionPrecioUnidad": [ 5.33, 5.33, 5.18, 5.18, 5.18, 6.32, 5.33, 8.58, 5.33, 5.31, 5.30, 5.29 ]
+				},
+				{
+					"anio": "2015",
+					"rendimiento": 1.8847851100773,
+					"evolucionPrecioUnidad": [ 6.33, 6.33, 6.18, 6.18, 6.18, 6.32, 5.33, 8.58, 5.33, 5.31, 5.30, 5.29 ]
+				},
+				{
+					"anio": "2015",
+					"rendimiento": 0.0033566895887985,
+					"evolucionPrecioUnidad": [ 7.33, 7.33, 5.18, 7.18, 7.18, 6.32, 7.33, 8.58, 7.33, 5.31, 5.30, 5.29 ]
+				}
+				]	
+			},
+			{
+			"nombre": "Lump Sum dolar",
+			"urlComposicion": "files/download.php?file=Composicion Fondo - Lump Sum dolar",
+			"precioUnidadUsd": 0.91770603550491,
+			"rendimientoAnual": 0.89578800410767,
+			"evolucionPrecioUnidad": [ 
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+15,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+15.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+15,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+15.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+16,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+17.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+18,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+19.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+19,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+20.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+21,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+20.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+20,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+20.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+23,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+21.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+24,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+23.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+24,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+25.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+26,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+25.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+25,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+25.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+26,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+27.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+29,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 112
+28.5 ],
+			"evolucionRendimiento":[
+				{
+					"anio": "2015",
+					"rendimiento": 2.1836666516884,
+					"evolucionPrecioUnidad": [ 5.33, 5.33, 5.18, 5.18, 5.18, 6.32, 5.33, 8.58, 5.33, 5.31, 5.30, 5.29 ]
+				},
+				{
+					"anio": "2015",
+					"rendimiento": 1.2765111468157,
+					"evolucionPrecioUnidad": [ 6.33, 6.33, 6.18, 6.18, 6.18, 6.32, 5.33, 8.58, 5.33, 5.31, 5.30, 5.29 ]
+				},
+				{
+					"anio": "2015",
+					"rendimiento": 0.015131847008659,
+					"evolucionPrecioUnidad": [ 7.33, 7.33, 5.18, 7.18, 7.18, 6.32, 7.33, 8.58, 7.33, 5.31, 5.30, 5.29 ]
+				}
+				]	
+			}
+		],
+		"otrosFondos": [
+			{
+			"nombre": "Commodities dolar",
+			"urlComposicion": "files/download.php?file=Composicion Fondo - Commodities dolar",
+			"precioUnidadUsd": 0.9946207399455,
+			"rendimientoAnual": 1.9758430858962,
+			"evolucionPrecioUnidad": [ 
+				
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+11,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+11.7,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+12.4,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+12.1,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+12.8,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+14.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+14.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+14.9,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+15.6,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+16.3,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+18,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+18.7,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+19.4,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+20.1,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+20.8,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+21.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+21.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+21.9,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+22.6,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+24.3,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+24,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+24.7,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+26.4,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+27.1,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+26.8,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+28.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+29.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 144
+29.9 ],
+			"evolucionRendimiento":[
+				{
+					"anio": "2015",
+					"rendimiento": 0.47641987189484,
+					"evolucionPrecioUnidad": [ 5.33, 5.33, 5.18, 5.18, 5.18, 6.32, 5.33, 8.58, 5.33, 5.31, 5.30, 5.29 ]
+				},
+				{
+					"anio": "2015",
+					"rendimiento": 1.0835456764715,
+					"evolucionPrecioUnidad": [ 6.33, 6.33, 6.18, 6.18, 6.18, 6.32, 5.33, 8.58, 5.33, 5.31, 5.30, 5.29 ]
+				},
+				{
+					"anio": "2015",
+					"rendimiento": 2.0629095784681,
+					"evolucionPrecioUnidad": [ 7.33, 7.33, 5.18, 7.18, 7.18, 6.32, 7.33, 8.58, 7.33, 5.31, 5.30, 5.29 ]
+				}
+				]	
+			},
+			{
+			"nombre": "Rainbow G dolar",
+			"urlComposicion": "files/download.php?file=Composicion Fondo - Rainbow G dolar",
+			"precioUnidadUsd": 0.73126961231756,
+			"rendimientoAnual": 2.0802986775899,
+			"evolucionPrecioUnidad": [ 
+				
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+11,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+10.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+11,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+11.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+12,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+13.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+14,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+13.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+14,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+14.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+15,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+15.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+16,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+17.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+17,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+17.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+18,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+18.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+20,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+20.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+21,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+20.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+22,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+22.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+23,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+23.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+23,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 174
+24.5 ],
+			"evolucionRendimiento":[
+				{
+					"anio": "2015",
+					"rendimiento": 2.1298418022366,
+					"evolucionPrecioUnidad": [ 5.33, 5.33, 5.18, 5.18, 5.18, 6.32, 5.33, 8.58, 5.33, 5.31, 5.30, 5.29 ]
+				},
+				{
+					"anio": "2015",
+					"rendimiento": 2.8066839761132,
+					"evolucionPrecioUnidad": [ 6.33, 6.33, 6.18, 6.18, 6.18, 6.32, 5.33, 8.58, 5.33, 5.31, 5.30, 5.29 ]
+				},
+				{
+					"anio": "2015",
+					"rendimiento": 1.2685680544323,
+					"evolucionPrecioUnidad": [ 7.33, 7.33, 5.18, 7.18, 7.18, 6.32, 7.33, 8.58, 7.33, 5.31, 5.30, 5.29 ]
+				}
+				]	
+			},
+			{
+			"nombre": "Money dolar",
+			"urlComposicion": "files/download.php?file=Composicion Fondo - Money dolar",
+			"precioUnidadUsd": 4.3603820765207,
+			"rendimientoAnual": 2.1111810817901,
+			"evolucionPrecioUnidad": [ 
+				
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+11,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+10.3,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+11.6,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+11.9,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+11.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+11.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+11.8,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+13.1,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+13.4,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+12.7,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+14,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+13.3,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+13.6,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+14.9,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+15.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+15.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+15.8,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+16.1,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+16.4,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+15.7,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+17,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+17.3,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+16.6,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+16.9,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+18.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+17.5,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+18.8,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 204
+18.1 ],
+			"evolucionRendimiento":[
+				{
+					"anio": "2018",
+					"rendimiento": 2.2676668177674,
+					"evolucionPrecioUnidad": [ 5.33, 5.33, 5.18, 5.18, 5.18, 6.32, 5.33, 8.58, 5.33, 5.31, 5.30, 5.29 ]
+				},
+				{
+					"anio": "2017",
+					"rendimiento": 1.877452223039,
+					"evolucionPrecioUnidad": [ 6.33, 6.33, 6.18, 6.18, 6.18, 6.32, 5.33, 8.58, 5.33, 5.31, 5.30, 5.29 ]
+				},
+				{
+					"anio": "2016",
+					"rendimiento": 2.9442237121725,
+					"evolucionPrecioUnidad": [ 7.33, 7.33, 5.18, 7.18, 7.18, 6.32, 7.33, 8.58, 7.33, 5.31, 5.30, 5.29 ]
+				}
+				]	
+			},
+			{
+			"nombre": "Performance USA ST dolar",
+			"urlComposicion": "files/download.php?file=Composicion Fondo - Performance USA ST dolar",
+			"precioUnidadUsd": 3.0050130081386,
+			"rendimientoAnual": 0.19012438235345,
+			"evolucionPrecioUnidad": [ 
+				
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+11,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+11.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+11.4,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+10.6,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+11.8,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+11,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+12.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+11.4,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+12.6,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+11.8,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+13,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+13.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+12.4,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+12.6,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+13.8,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+14,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+13.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+14.4,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+14.6,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+13.8,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+15,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+15.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+14.4,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+15.6,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+15.8,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+16,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+16.2,
+Deprecated: Implicit conversion from float 0.1 to int loses precision in /Users/romanpaparella/Documents/Claude projects/kambrica-zurich/json/512fondos.php on line 234
+16.4 ],
+			"evolucionRendimiento":[
+				{
+					"anio": "2015",
+					"rendimiento": 2.4181506710212,
+					"evolucionPrecioUnidad": [ 5.33, 5.33, 5.18, 5.18, 5.18, 6.32, 5.33, 8.58, 5.33, 5.31, 5.30, 5.29 ]
+				},
+				{
+					"anio": "2015",
+					"rendimiento": 1.3664612711251,
+					"evolucionPrecioUnidad": [ 6.33, 6.33, 6.18, 6.18, 6.18, 6.32, 5.33, 8.58, 5.33, 5.31, 5.30, 5.29 ]
+				},
+				{
+					"anio": "2015",
+					"rendimiento": 2.8497714064316,
+					"evolucionPrecioUnidad": [ 7.33, 7.33, 5.18, 7.18, 7.18, 6.32, 7.33, 8.58, 7.33, 5.31, 5.30, 5.29 ]
+				}
+				]	
+			}
+		]
+	}
+	
+}

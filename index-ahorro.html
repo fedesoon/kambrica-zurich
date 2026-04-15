@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Zurich Autogestión</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="icon.png">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/fonts_v201.min.css">
+	<link rel="stylesheet" href="css/zurichvida.css">
+	<link rel="stylesheet" href="css/datepicker.min.css">
+</head>
+
+<body>
+
+<div id="main-spinner" class="spinnerwrapper">
+	<div id="main-spinner">
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+	</div>
+</div>
+
+<header class="header" id="zurich-header"></header>
+<main role="main">
+
+<div class="tab-content" id="myTabContent">
+	<div class="tab-pane fade show active" id="panel-resumen" role="tabpanel" aria-labelledby="panel-ahorro-resumen-tab">
+		<div class="main panel"></div>
+	</div>
+	<div class="tab-pane fade" id="panel-cuenta-individual" role="tabpanel" aria-labelledby="panel-cuenta-individual-tab">
+		<div class="main panel"></div>
+	</div>
+	<div class="tab-pane fade" id="panel-pagos" role="tabpanel" aria-labelledby="panel-pagos-tab">
+		<div class="main panel"></div>
+	</div>
+	<div class="tab-pane fade" id="panel-fondos" role="tabpanel" aria-labelledby="panel-fondos-tab">
+		<div class="main panel"></div>
+	</div>
+	<div class="tab-pane fade" id="panel-gestiones" role="tabpanel" aria-labelledby="panel-gestiones-tab">
+		<div class="main panel"></div>
+	</div>
+	<div class="tab-pane fade" id="panel-informacion-fiscal" role="tabpanel" aria-labelledby="panel-informacion-fiscal-tab">
+		<div class="main panel"></div>
+	</div>
+	<div class="tab-pane fade" id="panel-detalle-de-poliza" role="tabpanel" aria-labelledby="panel-detalle-de-poliza-tab">
+		<div class="main panel"></div>
+	</div>
+	<div class="tab-pane fade" id="panel-perfil" role="tabpanel" aria-labelledby="panel-perfil-tab">
+		<div class="main panel"></div>
+	</div>
+	<div class="tab-pane fade" id="panel-mis-fondos-vigentes" role="tabpanel" aria-labelledby="panel-fondos-vigentes-tab">
+		<div class="main panel"></div>
+	</div>
+	<div class="tab-pane fade" id="panel-otros-fondos-vigentes" role="tabpanel" aria-labelledby="panel-fondos-vigentes-tab">
+		<div class="main panel"></div>
+	</div>
+</div>
+</main>
+<footer id="zurich-footer"></footer>
+
+<div class="modal fade" id="modal-default" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade custom-modal" id="modal-editar-email" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="title-1 mb-0">Editar email</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form id="usuario-nuevo-email">
+        <div class="modal-body">
+          <p class="body-copy-bold">Recibirás información de tu póliza y resumen mensual a la casilla de email que ingreses.</p>
+          <div class="form-group line-input-text email-form">
+            <input type="email" class="form-control" height="56" name="email" placeholder="Ingresar nuevo email">
+          </div>
+          <div class="error"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" data-dismiss="modal">Guardar cambios</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade custom-modal" id="modal-cambiar-clave" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="title-1 mb-0">Cambiar clave</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form>
+        <div class="modal-body">
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" data-dismiss="modal" disabled>Guardar cambios</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade custom-modal" id="modal-cambiaste-clave" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="title-1 mb-0">¿Cambiaste tu clave?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form>
+        <div class="modal-body">
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" data-dismiss="modal" disabled>Guardar cambios</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsrender@1.0.3/jsrender.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/numeral@2.0.6/numeral.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/numeral@2.0.6/locales/es.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+<script src="js/moment/moment-with-locale-es.min.js"></script>
+<script src="js/datepicker-bundle.es.min.js"></script>
+<script src="js/kmb-horizontal-scrollable-menu.min.js"></script>
+<script src="js/zurichvida.js"></script>
+
+<script>
+$(function(){
+	gZinit([
+		["get","static","json/static.json"],
+		["get","poliza","json/poliza.json"],
+
+		["spinner", ".7"],
+
+		["tpl", "#zurich-header", "header-ahorro.htm"],
+		["tpl", "#zurich-footer", "footer.htm"],
+		["tpl","#panel-resumen>.main.panel", "01-ahorro-resumen.htm"],
+
+		["spinner", "-1"],
+
+		["tpl","#panel-cuenta-individual>.main.panel", "02-ahorro-cuenta-individual.htm"],
+		["tpl","#panel-pagos>.main.panel", "03-ahorro-pagos.htm"],
+		["tpl","#panel-gestiones>.main.panel", "gestiones.htm"],
+		["tpl","#panel-informacion-fiscal>.main.panel", "06-ahorro-informacion-fiscal.htm"],
+		["tpl","#panel-detalle-de-poliza>.main.panel", "07-ahorro-detalle-de-poliza.htm"],
+		["tpl","#panel-mis-fondos-vigentes>.main.panel", "mis-fondos-vigentes.htm"],
+		["tpl","#panel-otros-fondos-vigentes>.main.panel", "otros-fondos-vigentes.htm"],
+		["tpl","#panel-perfil>.main.panel", "perfil.htm"],
+
+		["get","poliza","json/fondos.json"],
+		["tpl","#panel-fondos>.main.panel", "04-ahorro-fondos.htm"]
+		]);
+	});
+</script>
+</body>
+</html>
